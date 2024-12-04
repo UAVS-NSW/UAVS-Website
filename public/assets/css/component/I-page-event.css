@@ -1,0 +1,98 @@
+.I-page-event{
+
+} 
+.I-page-event .event-header{
+	background: linear-gradient(90deg, #3b4b9b 0%, #cb176d 100%);
+	padding: 90px 0;
+	color: #fff;
+	text-align: center;
+}
+.I-page-event .event-header h3{
+	font-size: 56px;
+	font-weight: 64px;
+	font-weight: 800;
+	margin: 0 0 16px 0;
+}
+.I-page-event .event-header p{
+	font-size: 20px;
+	font-weight: 32px;
+	font-weight: 500;
+}
+.I-page-event .event-main{
+	margin: 50px 0;
+	display: flex;
+	gap: 50px;
+}
+.I-page-event .event-main .event-item{
+	position: relative;
+	width: 50%;
+	padding-bottom: 50%;
+	border-radius: 8px;
+	border: 1px solid #f00;
+	overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.I-page-event .event-main .event-item .item-title{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;
+	font-weight: 40px;
+	font-weight: 800;
+	color: #fff;
+	background: linear-gradient(90deg, #3b4b9b 0%, #cb176d 100%);
+}
+.I-page-event .event-list{
+	overflow: hidden;
+	margin: 30px -20px;
+}
+.I-page-event .event-list .event-wrapper{
+	width: 25%;
+	padding: 10px 8px;
+	margin: 0 0 8px 0;
+	float: left;
+}
+.I-page-event .event-list .event-wrapper .event-item{ 
+	box-shadow: 0 0 1px 2px #eee;
+	padding: 12px 12px 24px 12px ;
+	border-radius: 8px;
+}
+.I-page-event .event-list .event-wrapper .event-item .item-image{
+	width: 100%;
+	padding-bottom: 50%;
+	border: 1px solid #f00;
+	margin:  0 0 12px 0;
+}
+.I-page-event .event-list .event-wrapper .event-item .item-title{
+	font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 25px;
+    -webkit-line-clamp: 3;
+    height: 75px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    margin: 0 0 8px 0;
+}
+
+.I-page-event .event-list .event-wrapper .event-item a{
+	display: inline-block;
+	padding: 8px 12px;
+	border: 1px solid #3b4b9b;
+	color: #3b4b9b;
+	font-size: 14px;
+	font-weight: 800;
+	border-radius: 4px;
+}
+.I-page-event .event-list .event-wrapper .event-item a:hover{
+	background-color: #3b4b9b;
+	color: #fff
+}
+

@@ -1,0 +1,197 @@
+.I-about{
+	position: relative;
+	width: 100%;
+	padding: 100px 0; 
+}
+.I-about .component-title{ 
+  letter-spacing: -.02em; 
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 60px;
+	margin: 0 0 50px 0;
+	text-align: center;
+	color: #3b4b9b;
+}
+.I-about .about-content{
+	display: flex; 
+	align-items: center;
+}
+.I-about .about-content .content-image-wrapper{
+	padding: 20px 0;
+	width: 50%;
+	position: relative;
+}
+.I-about .about-content .content-image-wrapper .bg-circle-01{
+	position: absolute;
+	top: -20px;
+	left: 20px;
+	background: linear-gradient(90deg, #3b4b9b 0%, #cb176d 100%);;
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	animation: scale2 5s alternate infinite;
+}
+.I-about .about-content .content-image-wrapper .bg-circle-02{
+	position: absolute;
+	bottom: -20px;
+	right: 20px;
+	background: linear-gradient(90deg, #3b4b9b 0%, #cb176d 100%);;
+	width: 125px;
+	height: 125px;
+	border-radius: 125px;
+	animation: scale2 5s alternate infinite;
+}
+.I-about .about-content .content-image-wrapper .image-wrapper{
+	position: relative;
+	width: 80%;
+	margin: auto;
+	z-index: 2;
+}
+
+.I-about .about-content .content-descriotion-wrapper{
+	width: 50%;
+	padding: 0 32px;
+	border-left: 4px solid #3b4b9b;
+	display: flex;
+	align-items: center;
+}
+.I-about .about-content .content-descriotion-wrapper p.top-content{
+	color: #3b4b9b;
+  letter-spacing: -.02em;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  margin: 0 0 24px 0;
+}
+.I-about .about-content .content-descriotion-wrapper h1.main-content{
+	color: #3b4b9b;
+  letter-spacing: -.02em;
+  white-space: normal;
+  margin: 0 0 24px 0;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 60px;
+}
+.I-about .about-content .content-descriotion-wrapper h1.main-content span{
+  background: -webkit-linear-gradient(0, #3b4b9b 0%, #cb176d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.I-about .about-content .content-descriotion-wrapper p.description-detail{
+	margin: 12px 0;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 28px; 
+	text-align: justify; 
+	color: #101945;
+}
+.I-about .about-footer{
+	width: 150px;
+	position: absolute;
+	bottom: -75px;
+	right: 0;
+}
+.I-about .image-large{
+	width: 100%;
+	padding-bottom: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 0 16px 0;
+  border-radius: 4px;
+}
+.I-about .image-list{
+	display: flex;
+	align-items: center;
+	gap: 16px;
+  margin: 0 0 16px 0;
+}
+.I-about .image-list .image-small{
+	width: 100%;
+	padding-bottom: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+.I-about .button-list{
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin: 24px 0;
+}
+.I-about .button-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	border: 1px solid #3b4b9b;
+	color: #3b4b9b;
+	font-size: 14px;
+	font-weight: 800;
+	border-radius: 4px;
+}
+.I-about .button-list a:hover{
+	background-color: #3b4b9b;
+	color: #fff
+}
+.I-about .button-list a.join{
+	display: inline-block;
+	padding: 8px 12px;
+	border: 1px solid #cb176d;
+	color: #cb176d;
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: 4px;
+}
+.I-about .button-list a.join:hover{
+	background-color: #cb176d;
+	color: #fff
+}
+
+
+@media only screen and (max-width: 1600px){
+
+}
+@media only screen and (max-width: 1480px){ 
+	.I-about .about-content .content-descriotion-wrapper p{
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+@media only screen and (max-width: 1280px){ 
+	.I-about .about-content .content-descriotion-wrapper p{
+		font-size: 13px;
+		line-height: 23px;
+	}
+}
+@media only screen and (max-width: 1024px){
+	.I-about .about-content{
+		display: block;
+	}
+	.I-about .about-content .content-image-wrapper{
+		width: 100%;
+	}
+	.I-about .about-content .content-image-wrapper .image-wrapper{
+		width: 100%;
+		max-width: 550px;
+	}
+	.I-about .about-content .content-descriotion-wrapper{
+		width: 100%;
+		padding: 16px 0;
+		max-width: 550px;
+		margin: 30px auto;
+		border: none;
+		border-top: 4px solid #FF0742;
+	}
+}
+@media only screen and (max-width: 991px){
+    
+}
+@media only screen and (max-width: 767px){
+
+}
+@media only screen and (max-width: 575px){
+	.I-about .about-content .content-descriotion-wrapper{
+		max-width: 375px;
+	}
+} 

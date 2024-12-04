@@ -1,0 +1,119 @@
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+}
+header .head-line{
+	width: 100%;
+	height: 20px;
+	background: linear-gradient(90deg, #3b4b9b 0%, #cb176d 100%);
+}
+header .head-content{
+	width: 100%;
+	height: 80px;
+	background-color: #fff;
+} 
+header .head-content .wrapper{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header .head-content .wrapper a.header-logo{
+	height: 70px;
+	display: block;
+}
+header .head-content .wrapper a.header-logo img{
+	width: auto;
+	height: 100%;
+}
+
+header .head-content .wrapper .header-nav{
+	display: flex;
+	align-items: center;
+}
+
+header .head-content .wrapper .header-nav a{
+	margin: 0 12px;
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px; 
+	text-align: center; 
+	color: #101945;
+	padding: 10px 8px;
+}
+header .head-content .wrapper .header-nav a.is-selected{
+	/*background: #cb176d1c;*/
+	border-radius: 40px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px; 
+	color: #cb176d;
+}
+header .head-content .wrapper .header-nav a.register-button{
+	background-color: #cb176d;
+	color: #fff;
+	padding: 10px 16px;
+	border-radius: 8px;
+}
+header .nav-control{
+	display: none;
+}
+
+
+@media only screen and (max-width: 1600px){
+
+}
+@media only screen and (max-width: 1480px){ 
+
+}
+@media only screen and (max-width: 1280px){ 
+	header .head-content .wrapper .header-nav a.is-selected{
+		font-size: 14px;
+		font-weight: 600;
+		padding: 10px 15px;
+	}
+	header .head-content .wrapper .header-nav a{
+		font-size: 14px;
+		font-weight: 600;
+	}
+}
+@media only screen and (max-width: 1024px){
+	header .nav-control{
+		display: block;
+		font-size: 24px;
+		cursor: pointer;
+	}
+	header .head-content .wrapper .header-nav{
+		display: block;
+		position: fixed;
+		width: 300px;
+		top: 100px;
+		right: -100%;
+		background-color: #fff;
+		height: calc(100vh - 100px);
+		padding: 30px;
+	}
+	header .head-content .wrapper .header-nav.is-open{
+		right: 0;
+	}
+	header .head-content .wrapper .header-nav a{
+		padding: 10px 15px;
+		margin: 10px 12px;
+	}
+}
+@media only screen and (max-width: 991px){
+    
+}
+@media only screen and (max-width: 767px){
+
+}
+@media only screen and (max-width: 575px){
+
+} 
+

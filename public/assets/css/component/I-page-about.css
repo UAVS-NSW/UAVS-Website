@@ -1,0 +1,104 @@
+.I-page-about{
+
+}
+.I-page-about .about-header{
+	background: linear-gradient(90deg, #3b4b9b 0%, #cb176d 100%);
+	padding: 90px 0;
+	color: #fff;
+	text-align: center;
+}
+.I-page-about .about-header h3{
+	font-size: 56px;
+	font-weight: 64px;
+	font-weight: 800;
+	margin: 0 0 16px 0;
+}
+.I-page-about .about-header p{
+	font-size: 20px;
+	font-weight: 32px;
+	font-weight: 500;
+}
+.I-page-about .about-content{
+	padding: 50px 0;
+}
+.I-page-about .about-content .description-wrapper{
+
+}
+.I-page-about .about-content .description-wrapper .logo-content{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 16px 0;
+}
+.I-page-about .about-content .description-wrapper .logo-content img{
+	width: auto;
+	height: 160px
+}
+.I-page-about .about-content .description-wrapper .description-detail{
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	text-align: justify;
+	margin: 0 0 8px 0;
+}
+
+.I-page-about .partner-content{
+	padding: 50px 0;
+}
+
+.I-page-about .partner-content .component-title{ 
+  letter-spacing: -.02em; 
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 60px;
+	margin: 0 0 50px 0;
+	text-align: center;
+	color: #3b4b9b;
+}
+.I-page-about .partner-content .component-title span{
+  background: -webkit-linear-gradient(0, #3b4b9b 0%, #cb176d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.I-page-about .partner-content .partner-list{
+	overflow: hidden;
+}
+.I-page-about .partner-content .partner-item{
+	width: 50%;
+	float: left;
+	display: flex;
+	align-items: center;
+	margin: 0 0 16px 0;
+}
+.I-page-about .partner-content .partner-item .item-image{
+	width: 50%;
+	padding-bottom: 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	border: 1px solid #cb176d; 
+}
+.I-page-about .partner-content .partner-item .item-description{
+	width: 50%;
+	padding: 0 0 0 30px;
+}
+.I-page-about .partner-content .partner-item .item-description h3{
+	font-size: 24px;
+	line-height24: 32px;
+	font-weight: 700;
+	margin: 0 0 16px 0;
+}
+.I-page-about .partner-content .partner-item .item-description p{
+	font-size: 16px;
+	line-height24: 32px;
+	font-weight: 500;
+	margin: 0 0 8px 0;
+}
+.I-page-about .partner-content .partner-item .item-description i{
+	width: 30px;
+	color: #c6196f;
+}
+
+
+

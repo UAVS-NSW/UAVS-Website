@@ -1,0 +1,83 @@
+.I-sponsor-list{
+	padding: 50px 0;
+}
+.I-sponsor-list .sponsor-list-header{
+	display: flex;
+	justify-content: center;
+} 
+.I-sponsor-list .sponsor-list-header span{
+  background: -webkit-linear-gradient(0, #3b4b9b 0%, #cb176d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 60px;
+  margin: 0 0 32px 0;
+}
+.I-sponsor-list .sponsor-list-item{
+	overflow: hidden;
+	margin: 30px -12px;
+}
+.I-sponsor-list .sponsor-list-item .item{
+	width: 33.3333%;
+	padding: 0 12px;
+	float: left;
+	margin: 0 0 42px 0;
+}
+.I-sponsor-list .sponsor-list-item .item .sponsor-image{
+	width: 100%;
+	padding-bottom: 60%;
+	border: 1px solid #f00;
+	margin: 0 0 12px 0;
+}
+.I-sponsor-list .sponsor-list-item .item .sponsor-content{
+	text-align: justify;
+	font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 25px;
+    -webkit-line-clamp: 7;
+    height: 175px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.I-sponsor-list .sponsor-list-item .item .sponsor-social{
+	margin: 24px 0 0 0 ;
+	display: flex;
+	justify-content: center;
+}
+.I-sponsor-list .button-list{
+	display: flex;
+	align-items: center;
+	gap: 16px; 
+}
+.I-sponsor-list .button-list a{
+	display: inline-block;
+	padding: 8px 12px;
+	border: 1px solid #3b4b9b;
+	color: #3b4b9b;
+	font-size: 14px;
+	font-weight: 800;
+	border-radius: 4px;
+}
+.I-sponsor-list .button-list a:hover{
+	background-color: #3b4b9b;
+	color: #fff
+}
+.I-sponsor-list .button-list a.join{
+	display: inline-block;
+	padding: 8px 12px;
+	border: 1px solid #cb176d;
+	color: #cb176d;
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: 4px;
+}
+.I-sponsor-list .button-list a.join:hover{
+	background-color: #cb176d;
+	color: #fff
+}
+
+
+
+

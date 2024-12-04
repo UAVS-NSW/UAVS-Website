@@ -1,0 +1,94 @@
+footer{
+	padding: 60px 0 80px 0;
+	background: linear-gradient(90deg, #3b4b9b 0%, #cb176d 100%);
+	text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+footer .footer-wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+footer .footer-wrapper .footer-layout{
+	color: #fff;
+}
+footer .footer-wrapper .logo{
+	width: 175px; 
+	margin: 0 0 12px 0;
+}
+footer .footer-wrapper .email{
+	font-size: 20px;
+	font-weight: 500; 
+	color: #fff;
+	display: flex;
+	margin: 0 0 16px 0;
+}
+footer .footer-social{
+	display: flex;
+	gap: 12px;
+	margin: 0 0 16px 0;
+}
+footer .social-item{
+	color: #fff;
+}
+footer .social-item a{
+}
+footer .social-item a img{
+	width: 20px;
+}
+footer .footer-wrapper .copyright{
+	font-size: 16px;
+	font-weight: 400; 
+	color: #fff;
+	display: flex;
+	margin: 0 0 16px 0;
+}
+
+footer .footer-wrapper .footer-layout .layout-title{
+	font-size: 20px;
+	margin: 0 0 12px 0;
+	font-weight: 700;
+}
+footer .footer-wrapper .footer-layout .layout-link{
+	display: flex;
+	margin: 0 0 6px 0;
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+}
+
+
+@media only screen and (max-width: 1600px){
+
+}
+@media only screen and (max-width: 1480px){ 
+
+}
+@media only screen and (max-width: 1280px){ 
+	
+}
+@media only screen and (max-width: 1024px){
+
+}
+@media only screen and (max-width: 991px){
+    footer .footer-wrapper{
+    	display: block;
+    }
+    footer .footer-wrapper .logo{
+    	margin: 12px auto;
+    }
+    footer .footer-wrapper .footer-layout{
+    	margin: 30px 0;
+    }
+    footer .footer-wrapper .footer-layout *{
+    	text-align: center;
+    	justify-content: center;
+    }
+}
+@media only screen and (max-width: 767px){
+
+}
+@media only screen and (max-width: 575px){
+
+} 

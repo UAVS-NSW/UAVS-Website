@@ -1,0 +1,95 @@
+.I-member{
+
+}
+.I-member .member-header{
+	background: linear-gradient(90deg, #3b4b9b 0%, #cb176d 100%);
+	padding: 90px 0;
+	color: #fff;
+	text-align: center;
+}
+.I-member .member-header h3{
+	font-size: 56px;
+	font-weight: 64px;
+	font-weight: 800;
+	margin: 0 0 16px 0;
+}
+.I-member .member-header p{
+	font-size: 20px;
+	font-weight: 32px;
+	font-weight: 500;
+}
+
+.I-member .member-content{
+	margin: 50px 0;
+}
+.I-member .member-content .component-title{ 
+  letter-spacing: -.02em; 
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 60px;
+	margin: 0 0 50px 0;
+	text-align: center;
+	color: #3b4b9b;
+}
+.I-member .member-content .component-title span{
+  background: -webkit-linear-gradient(0, #3b4b9b 0%, #cb176d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.I-member .member-content .content-wrapper{
+	margin: 100px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+}
+.I-member .member-content .content-wrapper .content-layout{
+	width: 40%;
+}
+.I-member .member-content .content-wrapper .content-layout .layout-header{
+	font-size: 20px;
+	color: #cb176d;
+	margin: 0 0 12px 0;
+	font-weight: 700;
+	text-align: center;
+}
+.I-member .member-content .content-wrapper .content-layout .layout-description{
+	font-size: 16px;
+	text-align: center;
+	margin: 0 0 8px 0;
+}
+.I-member .member-content .content-wrapper .content-layout .image-wrapper{
+	padding: 8px;
+	background-color: #fff;
+	box-shadow: 0 0 3px 3px #ccc;
+	border-radius: 8px;
+	height: 600px;
+	transform: rotate(10deg);
+}
+
+.I-member .member-content .people-wrapper{
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.I-member .member-content .people-wrapper .people-item{
+	width: 33.3333%;
+	padding: 50px;
+	background-color: #cb176d;
+	color: #fff;
+}
+.I-member .member-content .people-wrapper .people-item .layout-header{ 
+	font-size: 24px;
+	margin: 0 0 12px 0;
+	font-weight: 700;
+	text-align: center;
+}
+.I-member .member-content .people-wrapper .people-item .layout-description{
+	font-size: 16px;
+	text-align: center;
+	margin: 0 0 8px 0;
+}
+
+
+

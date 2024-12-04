@@ -1,0 +1,150 @@
+.I-event{
+/*	background-color: #ebeeff;*/
+	padding: 100px 0; 
+	position: relative;
+}
+.I-event .component-description{ 
+  	color: #3b4b9b;
+  	letter-spacing: -.02em;
+  	font-size: 20px;
+  	font-weight: 600;
+  	line-height: 25px; 
+  	text-align: center;
+  	margin: 0 0 12px 0;
+}
+.I-event .component-title{ 
+	display: flex;
+	justify-content: center;
+}
+.I-event .component-title span{
+  background: -webkit-linear-gradient(0, #3b4b9b 0%, #cb176d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 60px;
+  margin: 0 0 12px 0;
+}
+.I-event .event-description-wrapper{
+	border-radius: 4px;
+/*	border: 1px solid #3b4b9b;*/
+	padding: 40px 80px;
+	width: 100%;
+	margin: 0 0 12px 0;
+	font-size: 16px;
+}
+.I-event .event-description-wrapper p{
+	font-size: 16px;
+	margin: 0 0 8px 0;
+	font-weight: 400;
+	text-align: justify;
+}
+.I-event .event-join-wrapper{
+	display: flex;
+	gap: 12px;
+}
+.I-event .event-join-wrapper .join-wrapper{
+	border-radius: 4px; 
+	padding: 24px 80px;
+	width: 50%;
+}
+.I-event .event-join-wrapper .join-wrapper .card-title{
+  	letter-spacing: -.02em;
+  	font-size: 28px;
+  	font-weight: 800;
+  	line-height: 25px; 
+  	text-align: center;
+  	margin: 0 0 24px 0;
+  	text-transform: uppercase;
+}
+.I-event .event-join-wrapper .join-wrapper .card-image{
+	width: 100%;
+	padding-bottom: 250px;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center;
+  	border-radius: 4px;
+  	margin: 0 0 20px 0;
+}
+.I-event .event-join-wrapper .join-wrapper .card-description{
+	font-size: 16px;
+  	margin: 0 0 20px 0;
+	font-weight: 400;
+	text-align: justify;
+}
+.I-event .event-join-wrapper .join-wrapper a.event-link{
+	display: inline-block;
+	padding: 8px 12px; 
+	font-size: 14px;
+	font-weight: 800;
+	border-radius: 4px;
+}
+.I-event .event-join-wrapper .join-wrapper.uavs{
+	border: 1px solid #3b4b9b; 
+}
+.I-event .event-join-wrapper .join-wrapper.student{
+	border: 1px solid #cb176d; 
+}
+.I-event .event-join-wrapper .join-wrapper.uavs .card-title{
+	color: #3b4b9b; 
+}
+.I-event .event-join-wrapper .join-wrapper.student .card-title{
+	color: #cb176d; 
+}
+.I-event .event-join-wrapper .join-wrapper.uavs a.event-link{
+	border: 1px solid #3b4b9b;
+	color: #3b4b9b;
+}
+.I-event .event-join-wrapper .join-wrapper.student a.event-link{
+	border: 1px solid #cb176d;
+	color: #cb176d;
+}
+.I-event .event-join-wrapper .join-wrapper.uavs a.event-link:hover{
+	background-color: #3b4b9b;
+	color: #fff
+}
+.I-event .event-join-wrapper .join-wrapper.student a.event-link:hover{
+	background-color: #cb176d;
+	color: #fff
+}
+
+@media only screen and (max-width: 1600px){
+
+}
+@media only screen and (max-width: 1480px){ 
+
+}
+@media only screen and (max-width: 1280px){ 
+	
+}
+@media only screen and (max-width: 1024px){
+
+}
+@media only screen and (max-width: 991px){
+    .I-event .component-title span{
+    	font-size: 48px;
+    }
+    .I-event .event-description-wrapper{
+    	width: 100%;
+    	max-width: 575px;
+    	margin: auto;
+    	padding: 20px 0;
+    }
+    .I-event .event-join-wrapper{
+    	display: block;
+    	max-width: 575px;
+    	margin: auto;
+    }
+    .I-event .event-join-wrapper .join-wrapper{
+    	width: 100%;
+    	margin: 0 0 8px 0;
+    }
+}
+@media only screen and (max-width: 767px){
+
+}
+@media only screen and (max-width: 575px){
+	.I-event .event-join-wrapper .join-wrapper{
+		padding: 24px;
+	}
+} 

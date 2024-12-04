@@ -1,0 +1,52 @@
+.I-signigicant{
+	padding: 60px 0;
+	background: linear-gradient(90deg, #3b4b9b 0%, #cb176d 100%);
+	display: flex;
+	justify-content: space-between;
+}
+.I-signigicant .signigicant-item{
+	color: #fff;
+	width: 20%;
+}
+.I-signigicant .signigicant-item .item-value{
+	margin: 0 0 8px 0;
+  	text-align: center;
+  	font-size: 60px;
+  	font-weight: 700;
+}
+.I-signigicant .signigicant-item .item-name{
+	text-align: center;
+  	text-transform: uppercase;
+  	font-size: 15px;
+  	font-weight: 600;
+}
+
+
+@media only screen and (max-width: 1600px){
+
+}
+@media only screen and (max-width: 1480px){ 
+
+}
+@media only screen and (max-width: 1280px){ 
+	
+}
+@media only screen and (max-width: 1024px){
+
+}
+@media only screen and (max-width: 991px){
+    .I-signigicant{
+    	display: block;
+    }
+    .I-signigicant .signigicant-item{
+    	width: 100%;
+    	max-width: 575px;
+    	margin: 20px auto;
+    }
+}
+@media only screen and (max-width: 767px){
+
+}
+@media only screen and (max-width: 575px){
+
+} 

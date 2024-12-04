@@ -1,0 +1,68 @@
+.I-social{
+	background: linear-gradient(90deg, #3b4b9b 0%, #cb176d 100%);
+	display: flex;
+	justify-content: space-between;
+}
+.I-social .social-item{
+	color: #fff;
+	width: 16.6666%;
+}
+.I-social .social-item:hover{
+	background-color: #3d4a9a;
+} 
+.I-social .social-item a{
+	padding: 60px 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+.I-social .social-item a img{
+	width: 48px;
+}
+
+
+
+@media only screen and (max-width: 1600px){
+
+}
+@media only screen and (max-width: 1480px){ 
+
+}
+@media only screen and (max-width: 1280px){ 
+	
+}
+@media only screen and (max-width: 1024px){
+
+}
+@media only screen and (max-width: 991px){
+	.I-social{
+		display: block;
+		overflow: hidden;
+	}
+    .I-social .social-wrapper .social-item{
+    	width: 100%;
+    	max-width: 575px;
+    	margin:  10px auto;
+    }
+    .I-social .social-item{
+    	float: left;
+    	width: 33.3333%;
+    	max-width: 575px; 
+    }
+    .I-social .social-item a{
+    	padding: 20px;
+    }
+    .I-social .social-item a img{
+    	width: 24px;
+    }
+}
+@media only screen and (max-width: 767px){
+
+}
+@media only screen and (max-width: 575px){
+
+} 
+
+
+
