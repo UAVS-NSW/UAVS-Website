@@ -89,89 +89,97 @@
                             </div>
                         </div>
                         <div class="container vice-president" style="display: flex; justify-content: center; margin-bottom: 20px">
-                            <div class="item">
-                                <div class="item-image">
-                                    <div class="linkedin-link">
-                                    </div>
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
+                                <div class="info">
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="item-image">
-                                    <div class="linkedin-link">
-                                    </div>
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
+                                <div class="info">
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="item-image">
-                                    <div class="linkedin-link">
-                                    </div>
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
+                                <div class="info">
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
+                                </div>
                             </div>
                         </div>
 						<div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
-                            <div class="item">
-                                <div class="item-image">
-                                    <img src="assets/images/nsw.png" alt="Member 1">
-                                    <div class="linkedin-link">
-                                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                                    </div>
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
+                                <div class="info">
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="item-image">
-                                    <div class="linkedin-link">
-                                    </div>
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
+                                <div class="info">
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="item-image">
-                                    <div class="linkedin-link">
-                                    </div>
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
+                                <div class="info">
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="item-image">
-                                    <div class="linkedin-link">
-                                    </div>
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
+                                <div class="info">
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="item-image">
-                                    <div class="linkedin-link">
-                                    </div>
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
+                                <div class="info">
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="item-image">
-                                    <div class="linkedin-link">
-                                    </div>
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
+                                <div class="info">
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
+                                </div>
                             </div>
-                            <div class="item">
-                                <div class="item-image">
-                                    <div class="linkedin-link">
-                                    </div>
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
+                                <div class="info">
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
+                                </div>
                             </div>
                         </div>
 					</div>
