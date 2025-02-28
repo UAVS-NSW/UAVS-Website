@@ -3,13 +3,6 @@
 
 
 @section('css')
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    margin-bottom: 20px;
-}
 @endsection()
 
 
@@ -84,7 +77,7 @@
 						</div>
 					</div>
 					<div class="member-list-item">
-                        <div class="container president">
+                        <div class="container president" style="display: flex; justify-content: center; margin-bottom: 20px">
                             <div class="item">
                                 <div class="item-image">
                                     <div class="linkedin-link">
@@ -94,7 +87,7 @@
                                 <p>hehehe</p>
                             </div>
                         </div>
-                        <div class="container vice-president">
+                        <div class="container vice-president" style="display: flex; justify-content: center; margin-bottom: 20px">
                             <div class="item">
                                 <div class="item-image">
                                     <div class="linkedin-link">
@@ -120,7 +113,7 @@
                                 <p>hehehe</p>
                             </div>
                         </div>
-						<div class="container">
+						<div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
                             <div class="item">
                                 <div class="item-image">
                                     <div class="linkedin-link">
