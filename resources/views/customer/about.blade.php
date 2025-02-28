@@ -54,28 +54,28 @@
 			<div class="wrapper">
 				<div class="member-wrapper">
 					<div class="members-header">
-						<span>Members</span>
+						<span>Board of Management</span>
 					</div>
-					<div class="members-list">
-						<div class="member-item active">
-							2019
-						</div>
-						<div class="member-item">
-							2020
-						</div>
-						<div class="member-item">
-							2021
-						</div>
-						<div class="member-item">
-							2022
-						</div>
-						<div class="member-item">
-							2023
-						</div>
-						<div class="member-item">
-							2024
-						</div>
-					</div>
+{{--					<div class="members-list">--}}
+{{--						<div class="member-item active">--}}
+{{--							2019--}}
+{{--						</div>--}}
+{{--						<div class="member-item">--}}
+{{--							2020--}}
+{{--						</div>--}}
+{{--						<div class="member-item">--}}
+{{--							2021--}}
+{{--						</div>--}}
+{{--						<div class="member-item">--}}
+{{--							2022--}}
+{{--						</div>--}}
+{{--						<div class="member-item">--}}
+{{--							2023--}}
+{{--						</div>--}}
+{{--						<div class="member-item">--}}
+{{--							2024--}}
+{{--						</div>--}}
+{{--					</div>--}}
 					<div class="member-list-item">
                         <div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
                             <div class="person">
@@ -168,7 +168,7 @@
                                     <img src="assets/images/nhatQuyen" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3 class="name">Bui Nhat Quyen</h3>
+                                    <h3 class="name">Bui Nhat Quyen.jpg</h3>
                                     <p class="position">Head of Student Support Development</p>
                                 </div>
                             </div>
