@@ -107,8 +107,8 @@
                                     <p class="position">Head of Business Development</p>
                                 </div>
                             </div>
-                            <div class="person-vice-president">
-                                <div class="avatar">
+                            <div class="person">
+                                <div class="avatar-vice-president">
                                     <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
@@ -118,15 +118,6 @@
                             </div>
                         </div>
 						<div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
-                            <div class="person">
-                                <div class="avatar">
-                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Nguyen Phuc Toan</h3>
-                                    <p class="position">Head of Business Development</p>
-                                </div>
-                            </div>
                             <div class="person">
                                 <div class="avatar">
                                     <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
