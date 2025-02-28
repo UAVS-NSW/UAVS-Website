@@ -7,14 +7,52 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
-
-    .president {
     position: relative;
-    text-align: center;
-    margin-bottom: 30px;
     }
 
+    /* Style for each member (President + Team) */
+    .member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    }
+
+    /* The circular image (Node) */
+    .node {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    }
+
+    .node img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    }
+
+    /* Name and position */
+    h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    }
+
+    p {
+    font-size: 14px;
+    color: #666;
+    }
+
+    /* Row for Vice President, Secretary, Treasurer */
     .member-row {
     display: flex;
     justify-content: center;
@@ -22,50 +60,45 @@
     position: relative;
     }
 
-    .member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    }
-
-    .item-image {
-    width: 80px;
-    height: 80px;
-    background-color: lightgray;
-    border-radius: 50%;
-    position: relative;
-    }
-
-    /* Lines connecting members */
-    .member-tree::before {
-    content: "";
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    width: 2px;
-    height: 30px;
-    background-color: black;
-    }
-
-    .member-row::before {
-    content: "";
-    position: absolute;
-    top: -15px;
-    left: 10%;
-    width: 80%;
+    /* Horizontal line connecting President to Vice President, Secretary, Treasurer */
+    .tree-line {
+    width: 250px;
     height: 2px;
-    background-color: black;
+    background-color: red;
+    position: relative;
+    margin-bottom: 10px;
     }
 
+    /* Vertical lines connecting President to child nodes */
+    .tree-line::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: red;
+    top: -20px;
+    left: 50%;
+    }
+
+    .tree-line::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    top: 0;
+    left: 0;
+    }
+
+    /* Vertical lines from horizontal line to child nodes */
     .member-row .member::before {
     content: "";
     position: absolute;
-    top: -15px;
-    left: 50%;
     width: 2px;
-    height: 15px;
-    background-color: black;
+    height: 20px;
+    background-color: red;
+    top: -20px;
+    left: 50%;
     }
 @endsection()
 
@@ -141,34 +174,37 @@
 						</div>
 					</div>
                     <div class="member-tree">
-                        <!-- President -->
+                        <!-- President Node -->
                         <div class="member president">
-                            <div class="item-image">
-                                <div class="linkedin-link"></div>
+                            <div class="node">
+                                <img src="assets/images/president.jpg" alt="President">
                             </div>
                             <h3>President</h3>
                             <p>Leader</p>
                         </div>
 
-                        <!-- First Row: Three Main Members -->
+                        <!-- Line connecting to child nodes -->
+                        <div class="tree-line"></div>
+
+                        <!-- Child Nodes -->
                         <div class="member-row">
                             <div class="member">
-                                <div class="item-image">
-                                    <div class="linkedin-link"></div>
+                                <div class="node">
+                                    <img src="assets/images/vice-president.jpg" alt="Vice President">
                                 </div>
                                 <h3>Vice President</h3>
                                 <p>Operations</p>
                             </div>
                             <div class="member">
-                                <div class="item-image">
-                                    <div class="linkedin-link"></div>
+                                <div class="node">
+                                    <img src="assets/images/secretary.jpg" alt="Secretary">
                                 </div>
                                 <h3>Secretary</h3>
                                 <p>Documentation</p>
                             </div>
                             <div class="member">
-                                <div class="item-image">
-                                    <div class="linkedin-link"></div>
+                                <div class="node">
+                                    <img src="assets/images/treasurer.jpg" alt="Treasurer">
                                 </div>
                                 <h3>Treasurer</h3>
                                 <p>Finance</p>
