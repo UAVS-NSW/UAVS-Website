@@ -157,7 +157,7 @@
 				<div class="component-title">
 					<span>Proudly sponsored by</span>
 				</div>
-				<div class="sponsors-list">
+				<div class="sponsors-list" style="display: flex; flex-direction: row; justify-content: center">
 					<?php foreach ($sponsor as $key => $value): ?>
 						<div class="sponsore-item">
 							<img src="/{{$value->image}}" alt="">
