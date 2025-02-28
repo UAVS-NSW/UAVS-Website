@@ -165,7 +165,7 @@
 					<?php endforeach ?>
 				</div>
                 <div class="sponsore-item">
-                    <img src="/assets/images/axelgal.png" alt="New Sponsor 1">
+                    <img src="@/public/assets/images/axelgal.png" alt="New Sponsor 1">
                 </div>
 {{--                <div class="sponsore-item">--}}
 {{--                    <img src="/assets/images/sponsor-new-2.jpg" alt="New Sponsor 2">--}}
