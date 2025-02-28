@@ -96,9 +96,27 @@
 }
 
 /* Avatar: Larger and Circular */
+.avatar-vice-president {
+    width: 170px; /* Increased size */
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #3b4b9b; /* Subtle border for better aesthetics */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-president {
+    width: 250px; /* Increased size */
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #3b4b9b; /* Subtle border for better aesthetics */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .avatar {
-    width: 80px; /* Increased size */
-    height: 80px;
+    width: 100px; /* Increased size */
+    height: 100px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid #3b4b9b; /* Subtle border for better aesthetics */
