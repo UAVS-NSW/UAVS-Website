@@ -178,6 +178,8 @@
                     </div>
                     <div class="sponsore-item" style="width: 150px; height: 100px; background-image: url('assets/images/pwc.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
                     </div>
+                    <div class="sponsore-item" style="width: 150px; height: 100px; background-image: url('assets/images/Hashtax.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                    </div>
                     {{-- ------------------------------------------------------------------------------               --}}
 
 				</div>
