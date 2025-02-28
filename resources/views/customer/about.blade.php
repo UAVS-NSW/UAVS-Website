@@ -80,7 +80,7 @@
                         <div class="container president" style="display: flex; justify-content: center; margin-bottom: 20px">
                             <div class="person">
                                 <div class="avatar">
-                                    <img src="assets/images/user.jpg" alt="User Name">
+                                    <img src="assets/images/toan.jpg" alt="User Name">
                                 </div>
                                 <div class="info">
                                     <h3>User Name</h3>
