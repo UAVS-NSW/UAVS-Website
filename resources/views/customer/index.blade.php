@@ -163,6 +163,8 @@
 							<img src="/{{$value->image}}" alt="">
 						</div>
 					<?php endforeach ?>
+
+
                     {{----------------------chen anh tam thoi, sau se luu vao db--}}
                     <div class="sponsore-item">
                         <img src="assets/images/axegal.png" alt="New Sponsor 1" style="width: 150px; height: auto;">
@@ -171,9 +173,10 @@
                         <img src="assets/images/cubecorp.png" alt="New Sponsor 2" style="width: 150px; height: auto;">
                     </div>
                     <div class="sponsore-item">
-                        <img src="assets/images/nsw.png" alt="New Sponsor 2" style="width: 150px; height: auto;">
+                        <img src="assets/images/nsw.png" alt="New Sponsor 2" style="height: auto;">
                     </div>
                     {{-- ------------------------------------------------------------------------------               --}}
+
 				</div>
 
 				<div class="button-list">
