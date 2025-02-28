@@ -190,21 +190,21 @@
                         <div class="member-row">
                             <div class="member">
                                 <div class="node">
-                                    <img src="assets/images/vice-president.jpg" alt="Vice President">
+                                    <img src="assets/images/nsw.png" alt="Vice President">
                                 </div>
                                 <h3>Vice President</h3>
                                 <p>Operations</p>
                             </div>
                             <div class="member">
                                 <div class="node">
-                                    <img src="assets/images/secretary.jpg" alt="Secretary">
+                                    <img src="assets/images/nsw.png" alt="Secretary">
                                 </div>
                                 <h3>Secretary</h3>
                                 <p>Documentation</p>
                             </div>
                             <div class="member">
                                 <div class="node">
-                                    <img src="assets/images/treasurer.jpg" alt="Treasurer">
+                                    <img src="assets/images/nsw.png" alt="Treasurer">
                                 </div>
                                 <h3>Treasurer</h3>
                                 <p>Finance</p>
