@@ -80,40 +80,40 @@
                         <div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
                             <div class="person">
                                 <div class="avatar-president">
-                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
+                                    <img src="assets/images/MUS01433.JPG" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3 class="name">Nguyen Phuc Toan</h3>
-                                    <p class="position">Head of Business Development</p>
+                                    <h3 class="name">Vu Khac Gia Bao</h3>
+                                    <p class="position">President</p>
                                 </div>
                             </div>
                         </div>
                         <div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
                             <div class="person">
                                 <div class="avatar-vice-president">
-                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
+                                    <img src="assets/images/hoangNguyen.jpg" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3 class="name">Nguyen Phuc Toan</h3>
-                                    <p class="position">Head of Business Development</p>
+                                    <h3 class="name">Chu Hoang Nguyen</h3>
+                                    <p class="position">Vice President</p>
                                 </div>
                             </div>
                             <div class="person">
                                 <div class="avatar-vice-president">
-                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
+                                    <img src="assets/images/MUS1268" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3 class="name">Nguyen Phuc Toan</h3>
-                                    <p class="position">Head of Business Development</p>
+                                    <h3 class="name">Dam Thi Kim Ngan</h3>
+                                    <p class="position">Vice President</p>
                                 </div>
                             </div>
                             <div class="person">
                                 <div class="avatar-vice-president">
-                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
+                                    <img src="assets/images/MUS01395.JPG" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3 class="name">Nguyen Phuc Toan</h3>
-                                    <p class="position">Head of Business Development</p>
+                                    <h3 class="name">Vuong Minh Anh</h3>
+                                    <p class="position">Vice President</p>
                                 </div>
                             </div>
                         </div>
@@ -129,20 +129,20 @@
                             </div>
                             <div class="person">
                                 <div class="avatar">
-                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
+                                    <img src="assets/images/binhMinh.jpg" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3 class="name">Nguyen Phuc Toan</h3>
-                                    <p class="position">Head of Business Development</p>
+                                    <h3 class="name">Tran Binh Minh</h3>
+                                    <p class="position">Head of Media-Design</p>
                                 </div>
                             </div>
                             <div class="person">
                                 <div class="avatar">
-                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
+                                    <img src="assets/images/MUS1342.JPG" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3 class="name">Nguyen Phuc Toan</h3>
-                                    <p class="position">Head of Business Development</p>
+                                    <h3 class="name">Le Ha Vy</h3>
+                                    <p class="position">Head of Internal Affairs</p>
                                 </div>
                             </div>
                             <div class="person">
