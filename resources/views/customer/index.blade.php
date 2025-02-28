@@ -21,7 +21,7 @@
 					<div class="content-descriotion-wrapper">
 						<div>
 							<p class="top-content">UAVS</p>
-							<h1 class="main-content">Sydney University <span>Experience Design</span> Society</h1>
+							<h1 class="main-content">The United Associations of <span>Vietnamese Students</span> in NSW</h1>
 							<p class="description-detail">UAVS - The United Associations of Vietnamese Students in NSW  | UAVS NSW is the Vietnamese Student Association in New South Wales, established for the first time with the support of 7 student associations at major universities in the NSW state of Australia - Macquarie University, University of New South Wales, University of Sydney, University of Wollongong, University of Technology Sydney, Western Sydney University, and University of Newcastle.</p>
 							<p class="description-detail"> UAVS was founded with the aim of advising and assisting the Vietnamese student community in their academic pursuits, career development, as well as fostering connections and elevating the activities of Vietnamese students in NSW, Australia.</p>
 							<div class="button-list">
