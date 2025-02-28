@@ -183,11 +183,11 @@
                     {{-- ------------------------------------------------------------------------------               --}}
 
 				</div>
-
-				<div class="button-list">
-					<a href="/sponsor">More Sponsors</a>
-					<a href="" class="join">Contact Us</a>
-				</div>
+{{---- Comment tam}}
+{{--				<div class="button-list">--}}
+{{--					<a href="/sponsor">More Sponsors</a>--}}
+{{--					<a href="" class="join">Contact Us</a>--}}
+{{--				</div>--}}
 			</div>
 		</div>
 @endsection()
