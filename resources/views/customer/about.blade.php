@@ -165,10 +165,10 @@
                             </div>
                             <div class="person">
                                 <div class="avatar">
-                                    <img src="assets/images/nhatQuyen" alt="Nguyen Phuc Toan">
+                                    <img src="assets/images/nhatQuyen.jpg" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3 class="name">Bui Nhat Quyen.jpg</h3>
+                                    <h3 class="name">Bui Nhat Quyen</h3>
                                     <p class="position">Head of Student Support Development</p>
                                 </div>
                             </div>
