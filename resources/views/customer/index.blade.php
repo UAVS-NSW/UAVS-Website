@@ -169,10 +169,10 @@
                     <img src="assets/images/axegal.png" alt="New Sponsor 1" style="width: 150px; height: auto;">
                 </div>
                 <div class="sponsore-item">
-                    <img src="assets/images/cubecorp.png" alt="New Sponsor 2">
+                    <img src="assets/images/cubecorp.png" alt="New Sponsor 2" style="width: 150px; height: auto;">
                 </div>
                 <div class="sponsore-item">
-                    <img src="assets/images/nsw.png" alt="New Sponsor 2">
+                    <img src="assets/images/nsw.png" alt="New Sponsor 2" style="width: 150px; height: auto;">
                 </div>
                 {{-- ------------------------------------------------------------------------------               --}}
 				<div class="button-list">
