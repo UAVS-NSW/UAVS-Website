@@ -145,6 +145,38 @@
                                 <h3>Hehe</h3>
                                 <p>hehehe</p>
                             </div>
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
+                                </div>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
+                            </div>
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
+                                </div>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
+                            </div>
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
+                                </div>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
+                            </div>
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
+                                </div>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
+                            </div>
                         </div>
 					</div>
 				</div>
