@@ -116,7 +116,9 @@
 						<div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
                             <div class="item">
                                 <div class="item-image">
+                                    <img src="assets/images/nsw.png" alt="Member 1">
                                     <div class="linkedin-link">
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
                                     </div>
                                 </div>
                                 <h3>Hehe</h3>
