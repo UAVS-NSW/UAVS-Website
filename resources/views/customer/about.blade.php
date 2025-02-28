@@ -6,6 +6,8 @@
 .container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 @endsection()
 
