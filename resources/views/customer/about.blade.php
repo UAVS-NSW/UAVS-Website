@@ -78,13 +78,21 @@
 					</div>
 					<div class="member-list-item">
                         <div class="container president" style="display: flex; justify-content: center; margin-bottom: 20px">
-                            <div class="item">
-                                <div class="item-image">
-                                    <div class="linkedin-link">
+                            <div class="person">
+                                <div class="avatar">
+                                    <img src="assets/images/user.jpg" alt="User Name">
+                                </div>
+                                <div class="info">
+                                    <h3>User Name</h3>
+                                    <div class="links">
+                                        <a href="https://linkedin.com/in/username" target="_blank">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                        <a href="mailto:user@gmail.com">
+                                            <i class="fas fa-envelope"></i>
+                                        </a>
                                     </div>
                                 </div>
-                                <h3>Hehe</h3>
-                                <p>hehehe</p>
                             </div>
                         </div>
                         <div class="container vice-president" style="display: flex; justify-content: center; margin-bottom: 20px">
