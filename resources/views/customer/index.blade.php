@@ -166,15 +166,17 @@
 
 
                     {{----------------------chen anh tam thoi, sau se luu vao db--}}
-                    <div class="sponsore-item">
-                        <img src="assets/images/axegal.png" alt="New Sponsor 1" style="width: 150px; height: auto;">
+                    <div class="sponsore-item" style="width: 150px; height: 100px; background-image: url('assets/images/axegal.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
                     </div>
-                    <div class="sponsore-item">
-                        <img src="assets/images/cubecorp.png" alt="New Sponsor 2" style="width: 150px; height: auto;">
+                    <div class="sponsore-item" style="width: 150px; height: 100px; background-image: url('assets/images/cubecorp.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
                     </div>
                     <div class="sponsore-item" style="width: 150px; height: 100px; background-image: url('assets/images/nsw.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
                     </div>
                     <div class="sponsore-item" style="width: 150px; height: 100px; background-image: url('assets/images/logo.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                    </div>
+                    <div class="sponsore-item" style="width: 150px; height: 100px; background-image: url('assets/images/vietjet.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+                    </div>
+                    <div class="sponsore-item" style="width: 150px; height: 100px; background-image: url('assets/images/pwc.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
                     </div>
                     {{-- ------------------------------------------------------------------------------               --}}
 
