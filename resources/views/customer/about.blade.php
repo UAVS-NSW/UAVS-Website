@@ -3,103 +3,10 @@
 
 
 @section('css')
-    .member-tree {
+.container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    }
-
-    /* Style for each member (President + Team) */
-    .member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    margin-bottom: 20px;
-    }
-
-    /* The circular image (Node) */
-    .node {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border-radius: 50%;
-    border: 2px solid red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    }
-
-    .node img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    }
-
-    /* Name and position */
-    h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 5px;
-    }
-
-    p {
-    font-size: 14px;
-    color: #666;
-    }
-
-    /* Row for Vice President, Secretary, Treasurer */
-    .member-row {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    position: relative;
-    }
-
-    /* Horizontal line connecting President to Vice President, Secretary, Treasurer */
-    .tree-line {
-    width: 250px;
-    height: 2px;
-    background-color: red;
-    position: relative;
-    margin-bottom: 10px;
-    }
-
-    /* Vertical lines connecting President to child nodes */
-    .tree-line::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 20px;
-    background-color: red;
-    top: -20px;
-    left: 50%;
-    }
-
-    .tree-line::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: red;
-    top: 0;
-    left: 0;
-    }
-
-    /* Vertical lines from horizontal line to child nodes */
-    .member-row .member::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 20px;
-    background-color: red;
-    top: -20px;
-    left: 50%;
-    }
+    flex-direction: row;
+}
 @endsection()
 
 
@@ -173,44 +80,70 @@
 							2024
 						</div>
 					</div>
-                    <div class="member-tree">
-                        <!-- President Node -->
-                        <div class="member president">
-                            <div class="node">
-                                <img src="assets/images/president.jpg" alt="President">
-                            </div>
-                            <h3>President</h3>
-                            <p>Leader</p>
-                        </div>
-
-                        <!-- Line connecting to child nodes -->
-                        <div class="tree-line"></div>
-
-                        <!-- Child Nodes -->
-                        <div class="member-row">
-                            <div class="member">
-                                <div class="node">
-                                    <img src="assets/images/nsw.png" alt="Vice President">
+					<div class="member-list-item">
+                        <div class="container president">
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
                                 </div>
-                                <h3>Vice President</h3>
-                                <p>Operations</p>
-                            </div>
-                            <div class="member">
-                                <div class="node">
-                                    <img src="assets/images/nsw.png" alt="Secretary">
-                                </div>
-                                <h3>Secretary</h3>
-                                <p>Documentation</p>
-                            </div>
-                            <div class="member">
-                                <div class="node">
-                                    <img src="assets/images/nsw.png" alt="Treasurer">
-                                </div>
-                                <h3>Treasurer</h3>
-                                <p>Finance</p>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
                             </div>
                         </div>
-                    </div>
+                        <div class="container vice-president">
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
+                                </div>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
+                            </div>
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
+                                </div>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
+                            </div>
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
+                                </div>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
+                            </div>
+                        </div>
+						<div class="container">
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
+                                </div>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
+                            </div>
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
+                                </div>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
+                            </div>
+                            <div class="item">
+                                <div class="item-image">
+                                    <div class="linkedin-link">
+                                    </div>
+                                </div>
+                                <h3>Hehe</h3>
+                                <p>hehehe</p>
+                            </div>
+                        </div>
+					</div>
 				</div>
 			</div>
 		</div>
