@@ -115,8 +115,8 @@
 }
 
 .avatar {
-    width: 140px; /* Increased size */
-    height: 140px;
+    width: 160px; /* Increased size */
+    height: 160px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid #3b4b9b; /* Subtle border for better aesthetics */
