@@ -52,7 +52,7 @@
                             <div class="item-image" style="background-image: url('assets/images/western.png');"> </div>
                             <div class="item-description">
                                 <h3>Vietnamese International Student Association at WSU </h3>
-                                <p><i class="fas fa-envelope"></i> : western.visa@student.westernsydney.edu.au</p>
+                                <p><i class="fas fa-envelope"></i> : </p>
 {{--                                <p><i class="fas fa-globe"></i> : <a href="https://www.sydney.edu.au" target="_blank">sydney.edu.au</a></p>--}}
                                 <p><i class="fas fa-address-card"></i> : Sydney, NSW, Australia</p>
                             </div>
@@ -69,10 +69,10 @@
                         </div>
 
                         <div class="partner-item">
-                            <div class="item-image" style="background-image: url('assets/images/logo.png');"> </div>
+                            <div class="item-image" style="background-image: url('assets/images/sovis.png');"> </div>
                             <div class="item-description">
-                                <h3>University of Sydney</h3>
-                                <p><i class="fas fa-envelope"></i> : contact@sydney.edu.au</p>
+                                <h3> Society of Vietnamese International Students at UNSW</h3>
+                                <p><i class="fas fa-envelope"></i> : sovisunsw@gmail.com</p>
                                 <p><i class="fas fa-globe"></i> : <a href="https://www.sydney.edu.au" target="_blank">sydney.edu.au</a></p>
                                 <p><i class="fas fa-address-card"></i> : Sydney, NSW, Australia</p>
                             </div>
