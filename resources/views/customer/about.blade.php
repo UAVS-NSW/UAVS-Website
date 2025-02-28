@@ -100,7 +100,7 @@
                             </div>
                             <div class="person">
                                 <div class="avatar-vice-president">
-                                    <img src="assets/images/MUS1268.JPG" alt="Nguyen Phuc Toan">
+                                    <img src="assets/images/MUS01268.JPG" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
                                     <h3 class="name">Dam Thi Kim Ngan</h3>

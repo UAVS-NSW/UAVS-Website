@@ -115,8 +115,8 @@
 }
 
 .avatar {
-    width: 130px; /* Increased size */
-    height: 130px;
+    width: 140px; /* Increased size */
+    height: 140px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid #3b4b9b; /* Subtle border for better aesthetics */
@@ -167,5 +167,28 @@
     height: 100%;
     object-fit: cover; /* Ensures entire image fits */
     object-position: center; /* Centers the image */
+    border-radius: 50%;
+}
+
+
+/* Avatar container */
+.avatar-vice-president {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #3b4b9b;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensuring image is centered inside the circle */
+.avatar-vice-president img {
+    width: 120%;
+    height: 120%;
+    object-fit: cover; /* Ensures it fills the frame */
+    object-position: center top; /* Moves the subject upwards */
     border-radius: 50%;
 }
