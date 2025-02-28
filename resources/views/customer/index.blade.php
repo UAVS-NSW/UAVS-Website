@@ -160,10 +160,16 @@
 				<div class="sponsors-list">
 					<?php foreach ($sponsor as $key => $value): ?>
 						<div class="sponsore-item">
-							<img src="assets/image/axegal.png" alt="">
+							<img src="/{{$value->image}}" alt="">
 						</div>
 					<?php endforeach ?>
 				</div>
+                <div class="sponsore-item">
+                    <img src="/assets/images/axelgal.png" alt="New Sponsor 1">
+                </div>
+{{--                <div class="sponsore-item">--}}
+{{--                    <img src="/assets/images/sponsor-new-2.jpg" alt="New Sponsor 2">--}}
+{{--                </div>--}}
 				<div class="button-list">
 					<a href="/sponsor">More Sponsors</a>
 					<a href="" class="join">Contact Us</a>
