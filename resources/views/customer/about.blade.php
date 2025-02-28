@@ -80,18 +80,11 @@
                         <div class="container president" style="display: flex; justify-content: center; margin-bottom: 20px">
                             <div class="person">
                                 <div class="avatar">
-                                    <img src="assets/images/toan.JPG" alt="User Name">
+                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3>User Name</h3>
-                                    <div class="links">
-                                        <a href="https://linkedin.com/in/username" target="_blank">
-                                            <i class="fab fa-linkedin"></i>
-                                        </a>
-                                        <a href="mailto:user@gmail.com">
-                                            <i class="fas fa-envelope"></i>
-                                        </a>
-                                    </div>
+                                    <h3 class="name">Nguyen Phuc Toan</h3>
+                                    <p class="position">Head of Business Development</p>
                                 </div>
                             </div>
                         </div>
