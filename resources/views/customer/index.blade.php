@@ -7,7 +7,7 @@
 @endsection()
 
 
-@section('body') 
+@section('body')
 		<div class="I-banner" style="background-image: url('assets/images/uavs-banner.png');">
 			<div class="wrapper">
 				<div class="banner-wrapper">
@@ -16,11 +16,11 @@
 			</div>
 		</div>
 		<div class="I-about">
-			<div class="wrapper"> 
+			<div class="wrapper">
 				<div class="about-content">
 					<div class="content-descriotion-wrapper">
 						<div>
-							<p class="top-content">A STUDENT DESIGN SOCIETY</p>
+							<p class="top-content">UAVS</p>
 							<h1 class="main-content">Sydney University <span>Experience Design</span> Society</h1>
 							<p class="description-detail">UAVS - The United Associations of Vietnamese Students in NSW  | UAVS NSW is the Vietnamese Student Association in New South Wales, established for the first time with the support of 7 student associations at major universities in the NSW state of Australia - Macquarie University, University of New South Wales, University of Sydney, University of Wollongong, University of Technology Sydney, Western Sydney University, and University of Newcastle.</p>
 							<p class="description-detail"> UAVS was founded with the aim of advising and assisting the Vietnamese student community in their academic pursuits, career development, as well as fostering connections and elevating the activities of Vietnamese students in NSW, Australia.</p>
@@ -38,8 +38,8 @@
 							<div class="image-list">
 								<div class="image-small" style="background-image: url('assets/images/home-03.jpg');"></div>
 								<div class="image-small" style="background-image: url('assets/images/home-04.jpg');"></div>
-							</div>	
-							<div class="image-large" style="background-image: url('assets/images/home-02.jpg');"></div> 
+							</div>
+							<div class="image-large" style="background-image: url('assets/images/home-02.jpg');"></div>
 						</div>
 					</div>
 				</div>
@@ -81,7 +81,7 @@
 		            <li></li>
 		        </ul>
 			</div>
-			<div class="wrapper"> 
+			<div class="wrapper">
 				<div class="component-description">EVENTS, MERCH AND MORE.</div>
 				<div class="component-title">
 					<span>What do we do</span>
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 		<div class="I-linked">
-			<div class="wrapper"> 
+			<div class="wrapper">
 				<div class="component-description">GET FORTNIGHTLY ACCESS TO</div>
 				<div class="component-title">
 					<span>Exclusive design NEWSLETTER</span>
@@ -134,29 +134,29 @@
 		</div>
 		<div class="I-social">
 			<div class="social-item">
-				<a href="https://www.facebook.com/uavsnsw?mibextid=LQQJ4d"><img src="assets/images/facebook-logo.svg" alt=""></a> 
+				<a href="https://www.facebook.com/uavsnsw?mibextid=LQQJ4d"><img src="assets/images/facebook-logo.svg" alt=""></a>
 			</div>
 			<div class="social-item">
-				<a href="https://instagram.com/uavs.nsw?igshid=MzMyNGUyNmU2YQ=="><img src="assets/images/instagram.svg" alt=""></a> 
+				<a href="https://instagram.com/uavs.nsw?igshid=MzMyNGUyNmU2YQ=="><img src="assets/images/instagram.svg" alt=""></a>
 			</div>
 			<div class="social-item">
-				<a href="#"><img src="assets/images/linkedin.svg" alt=""></a> 
+				<a href="#"><img src="assets/images/linkedin.svg" alt=""></a>
 			</div>
 			<div class="social-item">
-				<a href="#"><img src="assets/images/discord.svg" alt=""></a> 
+				<a href="#"><img src="assets/images/discord.svg" alt=""></a>
 			</div>
 			<div class="social-item">
-				<a href="#"><img src="assets/images/medium.svg" alt=""></a> 
+				<a href="#"><img src="assets/images/medium.svg" alt=""></a>
 			</div>
 			<div class="social-item">
-				<a href="#"><img src="assets/images/tik-tok.svg" alt=""></a> 
+				<a href="#"><img src="assets/images/tik-tok.svg" alt=""></a>
 			</div>
 		</div>
 		<div class="I-sponsors">
-			<div class="wrapper">  
+			<div class="wrapper">
 				<div class="component-title">
 					<span>Proudly sponsored by</span>
-				</div> 
+				</div>
 				<div class="sponsors-list">
 					<?php foreach ($sponsor as $key => $value): ?>
 						<div class="sponsore-item">
@@ -172,6 +172,6 @@
 		</div>
 @endsection()
 
-@section('js') 
-<script type="text/javascript" src="{{ asset("customer/assets/js/page/hotel-detail.js") }}"></script> 
+@section('js')
+<script type="text/javascript" src="{{ asset("customer/assets/js/page/hotel-detail.js") }}"></script>
 @endsection()
