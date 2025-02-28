@@ -156,20 +156,20 @@
                             </div>
                             <div class="person">
                                 <div class="avatar">
-                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
+                                    <img src="assets/images/ronBui.jpg" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3 class="name">Nguyen Phuc Toan</h3>
-                                    <p class="position">Head of Business Development</p>
+                                    <h3 class="name">Bui Duy Quang</h3>
+                                    <p class="position">Head of Events</p>
                                 </div>
                             </div>
                             <div class="person">
                                 <div class="avatar">
-                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
+                                    <img src="assets/images/nhatQuyen" alt="Nguyen Phuc Toan">
                                 </div>
                                 <div class="info">
-                                    <h3 class="name">Nguyen Phuc Toan</h3>
-                                    <p class="position">Head of Business Development</p>
+                                    <h3 class="name">Bui Nhat Quyen</h3>
+                                    <p class="position">Head of Student Support Development</p>
                                 </div>
                             </div>
                         </div>
