@@ -113,7 +113,9 @@
                                 </div>
                                 <div class="info">
                                     <h3 class="name">Tran Binh Minh</h3>
-                                    <p class="position">Head of Media-Design</p>
+                                    <p class="position">Head of Media-Design</p>\
+{{--                                    I want when clicking to person class, it will pop up the image details to the center, when clicking to another place it will pop out like before cliing--}}
+                                    <img class="details popup-image" src="assets/images/binhMinh.jpg">
                                 </div>
                             </div>
                             <div class="person">
@@ -233,5 +235,28 @@
 @endsection()
 
 @section('js')
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const persons = document.querySelectorAll(".person");
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+        document.body.appendChild(overlay);
+
+        persons.forEach(person => {
+            person.addEventListener("click", function (event) {
+                const img = this.querySelector(".details");
+                if (img) {
+                    img.style.display = "block";
+                    overlay.style.display = "block";
+                }
+            });
+        });
+
+        overlay.addEventListener("click", function () {
+            document.querySelectorAll(".details").forEach(img => img.style.display = "none");
+            overlay.style.display = "none";
+        });
+    });
+</script>
 <script type="text/javascript" src="{{ asset("customer/assets/js/page/hotel-detail.js") }}"></script>
 @endsection()
