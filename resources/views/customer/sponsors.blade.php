@@ -12,7 +12,7 @@
 		<div class="sponsors-header">
 			<div class="wrapper">
 				<h3>Our industry partners.</h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+{{--				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>--}}
 			</div>
 		</div>
 		<div class="I-sponsor-list">
