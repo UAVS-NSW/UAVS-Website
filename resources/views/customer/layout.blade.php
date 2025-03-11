@@ -24,9 +24,9 @@
 				<div class="header-nav">
 					<a href="/" class="{{ $page == "index" ? "is-selected" : "" }}">Home</a>
 					<a href="{{ route("customer.about") }}" class="{{ $page == "about" ? "is-selected" : "" }}">About</a>
-					<a href="{{ route("customer.event") }}" class="{{ $page == "event" ? "is-selected" : "" }}">Events</a>
+{{--					<a href="{{ route("customer.event") }}" class="{{ $page == "event" ? "is-selected" : "" }}">Events</a>--}}
 					<a href="{{ route("customer.sponsor") }}" class="{{ $page == "sponsor" ? "is-selected" : "" }}">Sponsor</a>
-					<a href="{{ route("customer.blog") }}" class="{{ $page == "blog" ? "is-selected" : "" }}">Blog</a>
+{{--					<a href="{{ route("customer.blog") }}" class="{{ $page == "blog" ? "is-selected" : "" }}">Blog</a>--}}
 					<a href="{{ route("customer.contact") }}" class="{{ $page == "contact" ? "is-selected" : "" }}">Contact</a>
 					<a href="{{ route("customer.register") }}" class="register-button">Register</a>
 				</div>
