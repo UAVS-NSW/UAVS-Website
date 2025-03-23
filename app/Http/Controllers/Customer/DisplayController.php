@@ -3,15 +3,17 @@
 namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
+use App\Models\Member;
+use App\Repositories\Manager\MemberRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 
 
 use App\Repositories\Manager\SponsorRepository;
-use App\Models\Sponsor; 
+use App\Models\Sponsor;
 
 use App\Repositories\Manager\SchoolRepository;
-use App\Models\School; 
+use App\Models\School;
 use Carbon\Carbon;
 use Session;
 use Hash;
@@ -21,21 +23,24 @@ class DisplayController extends Controller
 {
     protected $school;
     protected $sponsor;
+    protected $member;
 
-    public function __construct(Sponsor $sponsor, School $school){
-        $this->sponsor             = new SponsorRepository($sponsor); 
-        $this->school             = new SchoolRepository($school); 
+    public function __construct(Sponsor $sponsor, School $school, Member $member){
+        $this->sponsor             = new SponsorRepository($sponsor);
+        $this->school             = new SchoolRepository($school);
+        $this->member = new MemberRepository($member);
     }
-    public function index(){ 
+    public function index(){
         $page = "index";
 
         $sponsor = $this->sponsor->get_limit();
         return view('customer.index', compact("page", "sponsor"));
     }
     public function about(){
+        $members = $this->member->get_all();
         $school = $this->school->get_all();
         $page = "about";
-        return view('customer.about', compact("page", "school"));
+        return view('customer.about', compact("page", "school", "members"));
     }
     public function event(){
         $page = "event";

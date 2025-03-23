@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 
 use App\Repositories\Manager\MemberRepository;
-use App\Models\Member; 
+use App\Models\Member;
 use Carbon\Carbon;
 use Session;
 use Hash;
@@ -18,7 +18,7 @@ class MemberController extends Controller
     protected $member;
 
     public function __construct(Member $member){
-        $this->member             = new MemberRepository($member); 
+        $this->member             = new MemberRepository($member);
     }
     public function index(){
         return view("admin.manager.member");
@@ -32,26 +32,35 @@ class MemberController extends Controller
         $data = $this->member->get_one($id);
         return $this->member->send_response(200, $data, null);
     }
- 
-    public function store(Request $request){ 
 
+    public function store(Request $request){
         $data_image = $this->member->imageInventor('images', $request->data_image, 500);
-        $data = [ 
-            "name"      => $request->data_name, 
-            "image"      => $data_image,  
-            "linkined"      => $request->data_linkedin, 
-            "position"      => $request->data_position,  
-            "year"      => $request->data_year,  
+        $data = [
+            "name"      => $request->data_name,
+            "image"      => $data_image,
+            "yob" => $request->data_yob,
+            "major" => $request->data_major,
+            "school" => $request->data_school,
+            "achievement" => $request->data_achievement,
+            "linkined"      => $request->data_linkedin,
+            "position"      => $request->data_position,
+            "year"      => $request->data_year,
+            "sort" => $request->data_sort
         ];
-        $data_create = $this->member->create($data); 
+        $data_create = $this->member->create($data);
         return $this->member->send_response("Create successful", $data_create, 201);
     }
-    public function update(Request $request){  
-        $data = [ 
-            "name"      => $request->data_name, 
-            "linkedin"      => $request->data_linkedin, 
-            "position"      => $request->data_position,  
-            "year"      => $request->data_year,  
+    public function update(Request $request){
+        $data = [
+            "name"      => $request->data_name,
+            "yob" => $request->data_yob,
+            "major" => $request->data_major,
+            "school" => $request->data_school,
+            "achievement" => $request->data_achievement,
+            "linkedin"      => $request->data_linkedin,
+            "position"      => $request->data_position,
+            "year"      => $request->data_year,
+            "sort" => $request->data_sort
         ];
 
         if ($request->data_image != "null") {
@@ -62,7 +71,7 @@ class MemberController extends Controller
     }
 
     public function delete($id){
-        $this->member->delete($id); 
+        $this->member->delete($id);
         return $this->member->send_response(200, "Delete successful", null);
     }
 }

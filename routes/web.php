@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\MemberController;
+use App\Http\Controllers\Customer\DisplayController;
+use App\Http\Controllers\Admin\DisplayController as AdminDisplayController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,28 +16,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'Customer\DisplayController@index')->name('customer.index');
-Route::get('about', 'Customer\DisplayController@about')->name('customer.about');
-Route::get('event', 'Customer\DisplayController@event')->name('customer.event');
-Route::get('sponsor', 'Customer\DisplayController@sponsor')->name('customer.sponsor');
-Route::get('blog', 'Customer\DisplayController@blog')->name('customer.blog');
-Route::get('contact', 'Customer\DisplayController@contact')->name('customer.contact'); 
-Route::get('newsletter', 'Customer\DisplayController@newsletter')->name('customer.newsletter'); 
-Route::get('event-list', 'Customer\DisplayController@eventlist')->name('customer.eventlist'); 
-Route::get('register', 'Customer\DisplayController@register')->name('customer.register'); 
+Route::get('/', [DisplayController::class, 'index'])->name('customer.index');
+Route::get('about', [DisplayController::class, 'about'])->name('customer.about');
+Route::get('event', [DisplayController::class, 'event'])->name('customer.event');
+Route::get('sponsor', [DisplayController::class,'sponsor'])->name('customer.sponsor');
+Route::get('blog', [DisplayController::class,'blog'])->name('customer.blog');
+Route::get('contact', [DisplayController::class,'contact'])->name('customer.contact');
+Route::get('newsletter', [DisplayController::class,'newsletter'])->name('customer.newsletter');
+Route::get('event-list', [DisplayController::class,'eventlist'])->name('customer.eventlist');
+Route::get('register', [DisplayController::class,'register'])->name('customer.register');
 
-Route::get('news', 'Customer\DisplayController@news')->name('customer.news');
-Route::get('news-detail', 'Customer\DisplayController@news_detail')->name('customer.news_detail');
+Route::get('news', [DisplayController::class,'news'])->name('customer.news');
+Route::get('news-detail', [DisplayController::class,'news_detail'])->name('customer.news_detail');
 
 Route::prefix('customer')->group(function () {
     Route::prefix('apip')->group(function () {
-        
+
     });
 });
 
 Route::middleware(['AuthAdmin:auth'])->group(function () {
     Route::prefix('admin')->group(function () {
-        Route::get('/login', 'Admin\DisplayController@login')->name('admin.login');
+        Route::get('/login', [AdminDisplayController::class, 'login'])->name('admin.login');
         Route::post('/login', 'Admin\AuthController@login')->name('admin.login');
     });
 });
@@ -42,32 +45,32 @@ Route::middleware(['AuthAdmin:auth'])->group(function () {
 Route::middleware(['AuthAdmin:admin'])->group(function () {
     Route::prefix('admin')->group(function () {
         Route::post('logout', 'Admin\AuthController@logout')->name('admin.logout');
-        
-        Route::get('/', 'Admin\DisplayController@index')->name('admin.index');
- 
+
+        Route::get('/', [AdminDisplayController::class, 'index'])->name('admin.index');
+
         Route::prefix('sponsor')->group(function () {
             Route::get('/', 'Admin\SponsorController@index')->name('admin.sponsor.index');
-        }); 
+        });
         Route::prefix('school')->group(function () {
             Route::get('/', 'Admin\SchoolController@index')->name('admin.school.index');
-        }); 
+        });
         Route::prefix('member')->group(function () {
             Route::get('/', 'Admin\MemberController@index')->name('admin.member.index');
-        }); 
+        });
         Route::prefix('event')->group(function () {
             Route::get('/', 'Admin\EventController@index')->name('admin.event.index');
-        }); 
+        });
         Route::prefix('news')->group(function () {
             Route::get('/', 'Admin\NewsController@index')->name('admin.news.index');
-        }); 
+        });
     });
 
     Route::prefix('apip')->group(function () {
-        Route::post('post-image', 'Admin\DisplayController@image')->name('admin.image.post');
+        Route::post('post-image', [AdminDisplayController::class, 'image'])->name('admin.image.post');
 
         Route::prefix('about')->group(function () {
-            Route::get('/get', 'Admin\AboutController@get')->name('admin.about.get'); 
-            Route::post('/update', 'Admin\AboutController@update')->name('admin.about.update'); 
+            Route::get('/get', 'Admin\AboutController@get')->name('admin.about.get');
+            Route::post('/update', 'Admin\AboutController@update')->name('admin.about.update');
         });
 
         Route::prefix('sponsor')->group(function () {
@@ -87,11 +90,11 @@ Route::middleware(['AuthAdmin:admin'])->group(function () {
         });
 
         Route::prefix('member')->group(function () {
-            Route::get('/get', 'Admin\MemberController@get')->name('admin.member.get');
-            Route::post('/store', 'Admin\MemberController@store')->name('admin.member.store');
-            Route::get('/get-one/{id}', 'Admin\MemberController@get_one')->name('admin.member.get_one');
-            Route::post('/update', 'Admin\MemberController@update')->name('admin.member.update');
-            Route::get('/delete/{id}', 'Admin\MemberController@delete')->name('admin.member.delete');
+            Route::get('/get', [MemberController::class, 'get'])->name('admin.member.get');
+            Route::post('/store', [MemberController::class, 'store'])->name('admin.member.store');
+            Route::get('/get-one/{id}', [MemberController::class, 'get_one'])->name('admin.member.get_one');
+            Route::post('/update', [MemberController::class, 'update'])->name('admin.member.update');
+            Route::get('/delete/{id}', [MemberController::class, 'delete'])->name('admin.member.delete');
         });
 
         Route::prefix('event')->group(function () {
@@ -109,6 +112,6 @@ Route::middleware(['AuthAdmin:admin'])->group(function () {
             Route::post('/update', 'Admin\NewsController@update')->name('admin.news.update');
             Route::get('/delete/{id}', 'Admin\NewsController@delete')->name('admin.news.delete');
         });
- 
+
     });
 });

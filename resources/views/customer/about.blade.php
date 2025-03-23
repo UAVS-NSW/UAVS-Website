@@ -36,129 +36,87 @@
 					<div class="members-header">
 						<span>Board of Management</span>
 					</div>
-{{--					<div class="members-list">--}}
-{{--						<div class="member-item active">--}}
-{{--							2019--}}
-{{--						</div>--}}
-{{--						<div class="member-item">--}}
-{{--							2020--}}
-{{--						</div>--}}
-{{--						<div class="member-item">--}}
-{{--							2021--}}
-{{--						</div>--}}
-{{--						<div class="member-item">--}}
-{{--							2022--}}
-{{--						</div>--}}
-{{--						<div class="member-item">--}}
-{{--							2023--}}
-{{--						</div>--}}
-{{--						<div class="member-item">--}}
-{{--							2024--}}
-{{--						</div>--}}
-{{--					</div>--}}
 					<div class="member-list-item">
-                        <div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
-                            <div class="person">
-                                <div class="avatar-president">
-                                    <img src="assets/images/MUS01433.JPG" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Vu Khac Gia Bao</h3>
-                                    <p class="position">President</p>
-                                </div>
+                        @php
+                            $presidents = $members->where('sort', 1);
+                            $vicePresidents = $members->where('sort', 2);
+                            $heads = $members->where('sort', 3);
+                        @endphp
+
+                            <!-- Presidents -->
+                        @if($presidents->isNotEmpty())
+                            <div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
+                                @foreach($presidents as $member)
+                                    <div class="person" >
+                                        <div class="avatar-president" data-member-id="{{ $member->id }}">
+                                            <img src="{{ $member->image ? asset($member->image) : 'assets/images/default-avatar.jpg' }}" alt="{{ $member->name }}">
+                                        </div>
+                                        <div class="info">
+                                            <h3 class="name">{{ $member->name }}</h3>
+                                            <p class="position">{{ $member->position }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
-                        </div>
-                        <div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
-                            <div class="person">
-                                <div class="avatar-vice-president">
-                                    <img src="assets/images/hoangNguyen.jpg" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Chu Hoang Nguyen</h3>
-                                    <p class="position">Vice President</p>
-                                </div>
+                        @endif
+
+                        <!-- Vice Presidents -->
+                        @if($vicePresidents->isNotEmpty())
+                            <div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
+                                @foreach($vicePresidents as $member)
+                                    <div class="person" >
+                                        <div class="avatar-vice-president" data-member-id="{{ $member->id }}">
+                                            <img src="{{ $member->image ? asset($member->image) : 'assets/images/default-avatar.jpg' }}" alt="{{ $member->name }}">
+                                        </div>
+                                        <div class="info">
+                                            <h3 class="name">{{ $member->name }}</h3>
+                                            <p class="position">{{ $member->position }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
-                            <div class="person">
-                                <div class="avatar-vice-president">
-                                    <img src="assets/images/MUS01268.JPG" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Dam Thi Kim Ngan</h3>
-                                    <p class="position">Vice President</p>
-                                </div>
+                        @endif
+
+                        <!-- Heads -->
+                        @if($heads->isNotEmpty())
+                            <div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
+                                @foreach($heads as $member)
+                                    <div class="person" >
+                                        <div class="avatar" data-member-id="{{ $member->id }}">
+                                            <img src="{{ $member->image ? asset($member->image) : 'assets/images/default-avatar.jpg' }}" alt="{{ $member->name }}">
+                                        </div>
+                                        <div class="info">
+                                            <h3 class="name">{{ $member->name }}</h3>
+                                            <p class="position">{{ $member->position }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
-                            <div class="person">
-                                <div class="avatar-vice-president">
-                                    <img src="assets/images/MUS01395.JPG" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Vuong Minh Anh</h3>
-                                    <p class="position">Vice President</p>
-                                </div>
-                            </div>
-                        </div>
-						<div class="container" style="display: flex; justify-content: center; margin-bottom: 20px">
-                            <div class="person">
-                                <div class="avatar">
-                                    <img src="assets/images/toan.JPG" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Nguyen Phuc Toan</h3>
-                                    <p class="position">Head of Business Development</p>
-                                </div>
-                            </div>
-                            <div class="person">
-                                <div class="avatar">
-                                    <img src="assets/images/binhMinh.jpg" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Tran Binh Minh</h3>
-                                    <p class="position">Head of Media-Design</p>\
-{{--                                    I want when clicking to person class, it will pop up the image details to the center, when clicking to another place it will pop out like before cliing--}}
-                                    <img class="details popup-image" src="assets/images/binhMinh.jpg">
-                                </div>
-                            </div>
-                            <div class="person">
-                                <div class="avatar">
-                                    <img src="assets/images/MUS01342.JPG" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Le Ha Vy</h3>
-                                    <p class="position">Head of Internal Affairs</p>
-                                </div>
-                            </div>
-                            <div class="person">
-                                <div class="avatar">
-                                    <img src="assets/images/vyNguyen.jpg" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Nguyen Ha Vy</h3>
-                                    <p class="position">Head of Public Relations</p>
-                                </div>
-                            </div>
-                            <div class="person">
-                                <div class="avatar">
-                                    <img src="assets/images/ronBui.jpg" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Bui Duy Quang</h3>
-                                    <p class="position">Head of Events</p>
-                                </div>
-                            </div>
-                            <div class="person">
-                                <div class="avatar">
-                                    <img src="assets/images/nhatQuyen.jpg" alt="Nguyen Phuc Toan">
-                                </div>
-                                <div class="info">
-                                    <h3 class="name">Bui Nhat Quyen</h3>
-                                    <p class="position">Head of Student Support Development</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endif
 					</div>
 				</div>
 			</div>
 		</div>
+
+        <!-- Modal Structure -->
+        <div id="memberModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <h3 id="modalName"></h3>
+                    <p id="modalPosition"></p>
+                    <p id="modalYob"></p>
+                    <p id="modalMajor"></p>
+                    <p id="modalSchool"></p>
+                    <p id="modalAchievement"></p>
+                    <p id="modalLinkedin"></p>
+                    <p id="modalYear"></p>
+                </div>
+            </div>
+        </div>
+
         <div class="I-page-about">
             <div class="partner-content">
                 <div class="wrapper">
@@ -230,6 +188,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
 
 @endsection()
@@ -237,24 +196,49 @@
 @section('js')
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const persons = document.querySelectorAll(".person");
-        const overlay = document.createElement("div");
-        overlay.classList.add("overlay");
-        document.body.appendChild(overlay);
+        const avatars = document.querySelectorAll(".avatar, .avatar-president, .avatar-vice-president");
+        const modal = document.getElementById("memberModal");
 
-        persons.forEach(person => {
-            person.addEventListener("click", function (event) {
-                const img = this.querySelector(".details");
-                if (img) {
-                    img.style.display = "block";
-                    overlay.style.display = "block";
+        // Add close button dynamically
+        const modalDetails = document.querySelector('.modal-details');
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'close-btn';
+        closeBtn.innerHTML = '×';
+        modalDetails.appendChild(closeBtn);
+
+        const members = @json($members);
+
+        avatars.forEach(avatar => {
+            avatar.addEventListener("click", function (e) {
+                e.stopPropagation();
+                const memberId = this.getAttribute('data-member-id');
+                const member = members.find(m => m.id == memberId);
+
+                if (member) {
+                    document.getElementById("modalImage").src = member.image ? `{{ asset('') }}${member.image}` : 'assets/images/default-avatar.jpg';
+                    document.getElementById("modalName").textContent = member.name || 'N/A';
+                    document.getElementById("modalPosition").innerHTML = `<strong>Position:</strong> ${member.position || 'N/A'}`;
+                    document.getElementById("modalYob").innerHTML = `<strong>Year of Birth:</strong> ${member.yob || 'N/A'}`;
+                    document.getElementById("modalMajor").innerHTML = `<strong>Major:</strong> ${member.major || 'N/A'}`;
+                    document.getElementById("modalSchool").innerHTML = `<strong>School:</strong> ${member.school || 'N/A'}`;
+                    document.getElementById("modalAchievement").innerHTML = `<strong>Achievement:</strong> ${member.achievement || 'N/A'}`;
+                    document.getElementById("modalLinkedin").innerHTML = `<strong>LinkedIn:</strong> ${member.linkined || 'N/A'}`;
+                    document.getElementById("modalYear").innerHTML = `<strong>Year:</strong> ${member.year || 'N/A'}`;
+                    modal.style.display = 'flex';
                 }
             });
         });
 
-        overlay.addEventListener("click", function () {
-            document.querySelectorAll(".details").forEach(img => img.style.display = "none");
-            overlay.style.display = "none";
+        // Close modal on outside click
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Close modal on button click
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
         });
     });
 </script>

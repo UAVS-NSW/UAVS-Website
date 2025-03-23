@@ -97,13 +97,23 @@ abstract class BaseRepository implements RepositoryInterface
     {
         return $this->model->updateOrCreate(['id' => $id], $data);
     }
-    
+
     // # tạo random secret key
     public function generateSecretKey(){
         return mt_rand(1000000, 9999999);
     }
 
     public function send_response($message, $data, $status){
+        if (isset($data->errorInfo)) {
+            $res = [
+                'status'    => 404,
+                'data'      => $data,
+                'message'   => $data->errorInfo[2],
+            ];
+
+            return response()->json($res);
+        }
+
         $res = [
             'status'    => $status,
             'data'      => $data,
@@ -127,7 +137,7 @@ abstract class BaseRepository implements RepositoryInterface
         $str =  preg_replace('/\s+/', '', $str);
         return $str;
     }
-    
+
     public function to_slug($str){
         $str = trim(mb_strtolower($str));
         $str = preg_replace('/(–)/', ' ', $str);
