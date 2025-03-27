@@ -93,6 +93,7 @@ const View = {
                 var data_school    = $(`${resource}`).find('.data-school').val();
                 var data_linkedin    = $(`${resource}`).find('.data-linkedin').val();
                 var data_position    = $(`${resource}`).find('.data-position').val();
+                var data_other_position    = $(`${resource}`).find('.data-other_position').val();
                 var data_sort    = $(`${resource}`).find('.data-sort').val();
                 var data_achievement    = $(`${resource}`).find('.data-achievement').val();
                 var data_year    = $(`${resource}`).find('.data-year').val();
@@ -115,6 +116,7 @@ const View = {
 
                     fd.append('data_linkedin', data_linkedin);
                     fd.append('data_position', data_position);
+                    fd.append('data_other_position', data_other_position);
                     fd.append('data_sort', data_sort);
                     fd.append('data_achievement', data_achievement);
                     fd.append('data_year', data_year);
@@ -146,6 +148,7 @@ const View = {
                 $(`${resource}`).find('.data-sort').val(data['sort']);
                 $(`${resource}`).find('.data-achievement').val(data.achievement);
                 $(`${resource}`).find('.data-year').val(data.year);
+                $(`${resource}`).find('.data-other_position').val(data.other_position);
                 $(`${resource}`).find('.image-preview').css({
                     'background-image': `url('/${data.image ?? 'icon/noimage.png'}')`
                 })
@@ -165,6 +168,7 @@ const View = {
                 var data_school    = $(`${resource}`).find('.data-school').val();
                 var data_linkedin    = $(`${resource}`).find('.data-linkedin').val();
                 var data_position    = $(`${resource}`).find('.data-position').val();
+                var data_other_position    = $(`${resource}`).find('.data-other_position').val();
                 var data_sort    = $(`${resource}`).find('.data-sort').val();
                 var data_achievement    = $(`${resource}`).find('.data-achievement').val();
                 var data_year    = $(`${resource}`).find('.data-year').val();
@@ -190,6 +194,7 @@ const View = {
                     fd.append('data_school', data_school);
                     fd.append('data_linkedin', data_linkedin);
                     fd.append('data_position', data_position);
+                    fd.append('data_other_position', data_other_position);
                     fd.append('data_sort', data_sort);
                     fd.append('data_achievement', data_achievement);
                     fd.append('data_year', data_year);
