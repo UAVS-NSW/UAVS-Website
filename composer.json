@@ -52,6 +52,12 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+        "php": {
+            "ini": {
+                "upload_max_filesize": "8M",
+                "post_max_size": "10M"
+            }
         }
     },
     "config": {
