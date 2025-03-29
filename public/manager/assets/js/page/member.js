@@ -25,7 +25,7 @@ const View = {
                 { title: 'School', name: 'school', orderable: true, },
                 { title: 'Position', name: 'name', orderable: true, },
                 { title: 'Achievement', name: 'Achievement', orderable: true, },
-                { title: 'Year', name: 'name', orderable: true, },
+                { title: 'Active year', name: 'name', orderable: true, },
                 { title: 'Action', name: 'action', orderable: true, width: '10%', },
             ];
             IndexView.table.init("#data-table", row_table);
@@ -93,18 +93,18 @@ const View = {
                 var data_school    = $(`${resource}`).find('.data-school').val();
                 var data_linkedin    = $(`${resource}`).find('.data-linkedin').val();
                 var data_position    = $(`${resource}`).find('.data-position').val();
+                var data_other_position    = $(`${resource}`).find('.data-other_position').val();
                 var data_sort    = $(`${resource}`).find('.data-sort').val();
                 var data_achievement    = $(`${resource}`).find('.data-achievement').val();
                 var data_year    = $(`${resource}`).find('.data-year').val();
 
                 // --Required Value
-                // if (data_name == '') { required_data.push('Name valid.'); onPushData = false }
-                // if (data_name == '') { required_data.push('Yob valid.'); onPushData = false }
-                // if (data_name == '') { required_data.push('Major valid.'); onPushData = false }
-                // if (data_name == '') { required_data.push('School valid.'); onPushData = false }
-                // if (data_name == '') { required_data.push('Achievement valid.'); onPushData = false }
-                // if (data_position == '') { required_data.push('Position valid.'); onPushData = false }
-                // if (data_year == '') { required_data.push('Year valid.'); onPushData = false }
+                if (data_name == '') { required_data.push('Name is required.'); onPushData = false }
+                if (data_name == '') { required_data.push('Yob is required.'); onPushData = false }
+                if (data_name == '') { required_data.push('Major is required.'); onPushData = false }
+                if (data_name == '') { required_data.push('School is required.'); onPushData = false }
+                if (data_position == '') { required_data.push('Position is required.'); onPushData = false }
+                if (data_year == '') { required_data.push('Active year is required.'); onPushData = false }
 
                 if (onPushData) {
                     fd.append('data_image', data_image[0] ?? "null");
@@ -115,6 +115,7 @@ const View = {
 
                     fd.append('data_linkedin', data_linkedin);
                     fd.append('data_position', data_position);
+                    fd.append('data_other_position', data_other_position);
                     fd.append('data_sort', data_sort);
                     fd.append('data_achievement', data_achievement);
                     fd.append('data_year', data_year);
@@ -146,6 +147,7 @@ const View = {
                 $(`${resource}`).find('.data-sort').val(data['sort']);
                 $(`${resource}`).find('.data-achievement').val(data.achievement);
                 $(`${resource}`).find('.data-year').val(data.year);
+                $(`${resource}`).find('.data-other_position').val(data.other_position);
                 $(`${resource}`).find('.image-preview').css({
                     'background-image': `url('/${data.image ?? 'icon/noimage.png'}')`
                 })
@@ -165,20 +167,19 @@ const View = {
                 var data_school    = $(`${resource}`).find('.data-school').val();
                 var data_linkedin    = $(`${resource}`).find('.data-linkedin').val();
                 var data_position    = $(`${resource}`).find('.data-position').val();
+                var data_other_position    = $(`${resource}`).find('.data-other_position').val();
                 var data_sort    = $(`${resource}`).find('.data-sort').val();
                 var data_achievement    = $(`${resource}`).find('.data-achievement').val();
                 var data_year    = $(`${resource}`).find('.data-year').val();
 
                 // --Required Value
-                // if (data_name == '') { required_data.push('Name valid.'); onPushData = false }
-                // if (data_yob == '') { required_data.push('Yob valid.'); onPushData = false }
-                // if (data_major == '') { required_data.push('Major valid.'); onPushData = false }
-                // if (data_school == '') { required_data.push('School valid.'); onPushData = false }
-                // if (data_linkedin == '') { required_data.push('Linkedin valid.'); onPushData = false }
-                // if (data_position == '') { required_data.push('Position valid.'); onPushData = false }
-                // if (data_sort == '') { required_data.push('Sort valid.'); onPushData = false }
-                // if (data_achievement == '') { required_data.push('Achievement valid.'); onPushData = false }
-                // if (data_year == '') { required_data.push('Year valid.'); onPushData = false }
+                if (data_name == '') { required_data.push('Name is required.'); onPushData = false }
+                if (data_yob == '') { required_data.push('Yob is required.'); onPushData = false }
+                if (data_major == '') { required_data.push('Major is required.'); onPushData = false }
+                if (data_school == '') { required_data.push('School is required.'); onPushData = false }
+                if (data_position == '') { required_data.push('Position is required.'); onPushData = false }
+                if (data_sort == '') { required_data.push('Sort valid.'); onPushData = false }
+                if (data_year == '') { required_data.push('Active year is required.'); onPushData = false }
 
 
                 if (onPushData) {
@@ -190,6 +191,7 @@ const View = {
                     fd.append('data_school', data_school);
                     fd.append('data_linkedin', data_linkedin);
                     fd.append('data_position', data_position);
+                    fd.append('data_other_position', data_other_position);
                     fd.append('data_sort', data_sort);
                     fd.append('data_achievement', data_achievement);
                     fd.append('data_year', data_year);

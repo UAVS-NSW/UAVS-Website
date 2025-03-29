@@ -126,6 +126,12 @@
                                                 <input type="text" class="form-control data-year number-type" placeholder="">
                                             </div>
                                         </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 col-form-label control-label">Chức vụ khác</label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control data-other_position" placeholder="">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

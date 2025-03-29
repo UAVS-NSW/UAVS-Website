@@ -18,7 +18,7 @@ class Member extends Migration
             $table->string('image');
             $table->string('name');
             $table->string('position');
-            $table->string('linkined');
+            $table->string('linkined')->nullable();
             $table->string('year');
             $table->integer('sort')->default(1);
             $table->integer('status')->default(1);
