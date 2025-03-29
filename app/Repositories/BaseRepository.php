@@ -5,6 +5,7 @@ namespace App\Repositories;
 use Carbon\Carbon;
 use App\Traits\ApiRequest;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
 use Image;
 use Session;
 use Hash;
@@ -50,6 +51,7 @@ abstract class BaseRepository implements RepositoryInterface
             DB::commit();
             return $record;
         } catch (\Exception $exception) {
+            Log::log($exception->getMessage(), LOG_ERR);
             DB::rollBack();
             return false;
         }
@@ -123,13 +125,36 @@ abstract class BaseRepository implements RepositoryInterface
     }
 
     public function imageInventor($folder, $image, $size){
-        $input['imagename'] = time() . static::to_reset($image->getClientOriginalName());
-        $filePath = public_path($folder);
-        $img = Image::make($image->path());
-        $img->resize($size, null, function ($const) {
-            $const->aspectRatio();
-        })->save($filePath.'/'.$input['imagename']);
-        return $folder.'/'.$input['imagename'];
+        try {
+            $originalName = $image->getClientOriginalName();
+            $tempPath = $image->path();
+            $input['imagename'] = time() . static::to_reset($originalName);
+
+            \Log::info('Processing image', [
+                'original' => $originalName,
+                'temp_path' => $tempPath,
+                'target' => $input['imagename'],
+                'file_exists' => file_exists($tempPath) ? 'Yes' : 'No'
+            ]);
+            $filePath = public_path($folder);
+            if (!file_exists($filePath)) {
+                mkdir($filePath, 0755, true);
+            }
+
+            $img = Image::make($tempPath);
+            $img->resize($size, null, function ($const) {
+                $const->aspectRatio();
+            })->save($filePath.'/'.$input['imagename']);
+
+            return $folder.'/'.$input['imagename'];
+        } catch (\Exception $e) {
+            \Log::error('Image processing failed: ' . $e->getMessage(), [
+                'original' => $image->getClientOriginalName(),
+                'temp_path' => $image->path(),
+                'target' => $input['imagename']
+            ]);
+            throw $e; // Or return an error response
+        }
     }
 
     public function to_reset($string){

@@ -72,7 +72,7 @@ const IndexView = {
             $('.image-input').val('')
             $(document).on('change', '.image-input', function(e) {
                 var father = $(this).parent().parent()
-                if(this.files[0].size > 5242880){
+                if(this.files[0].size > 8192000){
                    alert("File quá lớn, dung lượng upload tối đa 5 MB!");
                 }else{
                     var img = new Image;
@@ -125,7 +125,7 @@ const IndexView = {
                 $('.form-preview.multi-upload').append(`
                     <div class="image-preview-wrapper onload-upload image-loader">
                         <div class="image-preview-item image-load-data" style="background-image: url('/${v}')" data-url="${v}"><div class="item-loader-remove"><i class="fas fa-times"></i></div></div>
-                    </div>`); 
+                    </div>`);
             })
         },
         getVal(){
@@ -151,7 +151,7 @@ const IndexView = {
                             $('.form-preview.multi-upload').append(`
                                 <div class="image-preview-wrapper prev-upload">
                                     <div class="image-preview-item" style="background-image: url('${event.target.result}')">  </div>
-                                </div>`); 
+                                </div>`);
                         }
                         reader.readAsDataURL(this.files[i]);
                     }
@@ -213,7 +213,7 @@ const IndexView = {
             });
             $(resource).css({"width": width + "px"})
         },
-    }, 
+    },
     Config: {
         onNumberKey(evt){
             var charCode = (evt.which) ? evt.which : event.keyCode
@@ -231,7 +231,7 @@ const IndexView = {
             return string.replace(/(<([^>]+)>)/ig, "");
         },
         toRemoveStringTag(string){
-            return string.replace(/(<([^>]+)>(.*?)<\/([^>]+)>)/ig, ""); 
+            return string.replace(/(<([^>]+)>(.*?)<\/([^>]+)>)/ig, "");
         },
         onPricesKey(evt){
             var charCode = (evt.which) ? evt.which : event.keyCode
@@ -288,7 +288,7 @@ const IndexView = {
                     .fail(err => { IndexView.helper.showToastError('Error', 'Có lỗi sảy ra'); })
                     .always(() => { });
             });
-            
+
         });
 
         $(document).on('keyup', '.input-type-preview', function() {
@@ -297,6 +297,6 @@ const IndexView = {
             $(`[data-output=${output}]`).text(value_text)
         });
     }
-    
+
     init();
 })();

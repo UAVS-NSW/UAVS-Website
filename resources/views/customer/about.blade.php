@@ -113,6 +113,7 @@
                     <p id="modalAchievement"></p>
                     <p id="modalLinkedin"></p>
                     <p id="modalYear"></p>
+                    <p id="modalOtherPosition"></p>
                 </div>
             </div>
         </div>
@@ -224,6 +225,7 @@
                     document.getElementById("modalAchievement").innerHTML = `<strong>Achievement:</strong> ${member.achievement || 'N/A'}`;
                     document.getElementById("modalLinkedin").innerHTML = `<strong>LinkedIn:</strong> ${member.linkined || 'N/A'}`;
                     document.getElementById("modalYear").innerHTML = `<strong>Year:</strong> ${member.year || 'N/A'}`;
+                    document.getElementById("modalOtherPosition").innerHTML = `<strong>Other position:</strong> ${member.other_position || 'N/A'}`;
                     modal.style.display = 'flex';
                 }
             });
