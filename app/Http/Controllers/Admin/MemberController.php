@@ -34,7 +34,17 @@ class MemberController extends Controller
     }
 
     public function store(Request $request){
-        $data_image = $this->member->imageInventor('images', $request->data_image, 500);
+        $image = $request->file('data_image');
+
+        if (!$request->hasFile('data_image')) {
+            return response()->json(['error' => 'No file uploaded'], 400);
+        }
+
+        if (!$image->isValid()) {
+            return response()->json(['error' => 'Uploaded file is not valid'], 400);
+        }
+
+        $data_image = $this->member->imageInventor('images', $image, 500);
         $data = [
             "name"      => $request->data_name,
             "image"      => $data_image,
@@ -44,6 +54,7 @@ class MemberController extends Controller
             "achievement" => $request->data_achievement,
             "linkined"      => $request->data_linkedin,
             "position"      => $request->data_position,
+            "other_position"      => $request->data_other_position,
             "year"      => $request->data_year,
             "sort" => $request->data_sort
         ];
@@ -57,8 +68,9 @@ class MemberController extends Controller
             "major" => $request->data_major,
             "school" => $request->data_school,
             "achievement" => $request->data_achievement,
-            "linkedin"      => $request->data_linkedin,
+            "linkined"      => $request->data_linkedin,
             "position"      => $request->data_position,
+            "other_position"      => $request->data_other_position,
             "year"      => $request->data_year,
             "sort" => $request->data_sort
         ];

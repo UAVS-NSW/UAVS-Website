@@ -25,7 +25,7 @@ const View = {
                 { title: 'School', name: 'school', orderable: true, },
                 { title: 'Position', name: 'name', orderable: true, },
                 { title: 'Achievement', name: 'Achievement', orderable: true, },
-                { title: 'Year', name: 'name', orderable: true, },
+                { title: 'Active year', name: 'name', orderable: true, },
                 { title: 'Action', name: 'action', orderable: true, width: '10%', },
             ];
             IndexView.table.init("#data-table", row_table);
@@ -99,13 +99,12 @@ const View = {
                 var data_year    = $(`${resource}`).find('.data-year').val();
 
                 // --Required Value
-                // if (data_name == '') { required_data.push('Name valid.'); onPushData = false }
-                // if (data_name == '') { required_data.push('Yob valid.'); onPushData = false }
-                // if (data_name == '') { required_data.push('Major valid.'); onPushData = false }
-                // if (data_name == '') { required_data.push('School valid.'); onPushData = false }
-                // if (data_name == '') { required_data.push('Achievement valid.'); onPushData = false }
-                // if (data_position == '') { required_data.push('Position valid.'); onPushData = false }
-                // if (data_year == '') { required_data.push('Year valid.'); onPushData = false }
+                if (data_name == '') { required_data.push('Name is required.'); onPushData = false }
+                if (data_name == '') { required_data.push('Yob is required.'); onPushData = false }
+                if (data_name == '') { required_data.push('Major is required.'); onPushData = false }
+                if (data_name == '') { required_data.push('School is required.'); onPushData = false }
+                if (data_position == '') { required_data.push('Position is required.'); onPushData = false }
+                if (data_year == '') { required_data.push('Active year is required.'); onPushData = false }
 
                 if (onPushData) {
                     fd.append('data_image', data_image[0] ?? "null");
@@ -174,15 +173,13 @@ const View = {
                 var data_year    = $(`${resource}`).find('.data-year').val();
 
                 // --Required Value
-                // if (data_name == '') { required_data.push('Name valid.'); onPushData = false }
-                // if (data_yob == '') { required_data.push('Yob valid.'); onPushData = false }
-                // if (data_major == '') { required_data.push('Major valid.'); onPushData = false }
-                // if (data_school == '') { required_data.push('School valid.'); onPushData = false }
-                // if (data_linkedin == '') { required_data.push('Linkedin valid.'); onPushData = false }
-                // if (data_position == '') { required_data.push('Position valid.'); onPushData = false }
-                // if (data_sort == '') { required_data.push('Sort valid.'); onPushData = false }
-                // if (data_achievement == '') { required_data.push('Achievement valid.'); onPushData = false }
-                // if (data_year == '') { required_data.push('Year valid.'); onPushData = false }
+                if (data_name == '') { required_data.push('Name is required.'); onPushData = false }
+                if (data_yob == '') { required_data.push('Yob is required.'); onPushData = false }
+                if (data_major == '') { required_data.push('Major is required.'); onPushData = false }
+                if (data_school == '') { required_data.push('School is required.'); onPushData = false }
+                if (data_position == '') { required_data.push('Position is required.'); onPushData = false }
+                if (data_sort == '') { required_data.push('Sort valid.'); onPushData = false }
+                if (data_year == '') { required_data.push('Active year is required.'); onPushData = false }
 
 
                 if (onPushData) {
