@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Customer\DisplayController;
 use App\Http\Controllers\Admin\DisplayController as AdminDisplayController;
@@ -21,6 +22,7 @@ Route::get('about', [DisplayController::class, 'about'])->name('customer.about')
 Route::get('event', [DisplayController::class, 'event'])->name('customer.event');
 Route::get('sponsor', [DisplayController::class,'sponsor'])->name('customer.sponsor');
 Route::get('blog', [DisplayController::class,'blog'])->name('customer.blog');
+Route::get('/blogs/{blog}', [DisplayController::class, 'show'])->name('blogs.show');
 Route::get('contact', [DisplayController::class,'contact'])->name('customer.contact');
 Route::get('newsletter', [DisplayController::class,'newsletter'])->name('customer.newsletter');
 Route::get('event-list', [DisplayController::class,'eventlist'])->name('customer.eventlist');
@@ -63,6 +65,16 @@ Route::middleware(['AuthAdmin:admin'])->group(function () {
         Route::prefix('news')->group(function () {
             Route::get('/', 'Admin\NewsController@index')->name('admin.news.index');
         });
+        //blogs
+        Route::get('/blogs', [BlogController::class, 'index'])->name('admin.blogs.index');
+    });
+
+    Route::prefix('api/blogs')->group(function () {
+        Route::get('/', [BlogController::class, 'get'])->name('api.blogs.getAll');
+        Route::get('/{id}', [BlogController::class, 'get_one'])->name('api.blogs.getOne');
+        Route::post('/', [BlogController::class, 'store'])->name('api.blogs.store');
+        Route::post('/update', [BlogController::class, 'update'])->name('api.blogs.update');
+        Route::delete('/{id}', [BlogController::class, 'delete'])->name('api.blogs.delete');
     });
 
     Route::prefix('apip')->group(function () {

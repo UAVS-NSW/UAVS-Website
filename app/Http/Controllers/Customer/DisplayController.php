@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use App\Models\Member;
 use App\Repositories\Manager\MemberRepository;
 use Illuminate\Http\Request;
@@ -52,8 +53,16 @@ class DisplayController extends Controller
         return view('customer.sponsors', compact("page", "sponsor"));
     }
     public function blog(){
+        $blogs = Blog::orderBy('publish_date', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->paginate(5);
         $page = "blog";
-        return view('customer.blog', compact("page"));
+        return view('customer.blog', compact("page", 'blogs'));
+    }
+    public function show(Blog $blog)
+    {
+        $page = "blog-detail";
+        return view('customer.blog-detail', compact('page', 'blog'));
     }
     public function contact(){
         $page = "contact";

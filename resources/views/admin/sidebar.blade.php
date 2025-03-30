@@ -1,6 +1,6 @@
 <div class="side-nav">
     <div class="side-nav-inner">
-        <ul class="side-nav-menu scrollable"> 
+        <ul class="side-nav-menu scrollable">
             <li class="nav-item sponsor-group">
                 <a class="dropdown-toggle sponsor" href="{{ route('admin.sponsor.index') }}">
                     <span class="icon-holder">
@@ -47,6 +47,14 @@
                         <i class="anticon anticon-team"></i>
                     </span>
                     <span class="title">Layout</span>
+                </a>
+            </li>
+            <li class="nav-item layout-group">
+                <a class="dropdown-toggle layout" href="{{ route('admin.blogs.index') }}">
+                    <span class="icon-holder">
+                        <i class="anticon anticon-team"></i>
+                    </span>
+                    <span class="title">Blogs</span>
                 </a>
             </li>
         </ul>
