@@ -36,7 +36,9 @@
                         </div>
                     </div>
                 @empty
-                    <p>No blogs available.</p>
+                    <div class="no-blogs">
+                        <p>No blogs available.</p>
+                    </div>
                 @endforelse
                 <div class="pagination">
                     {{ $blogs->links('vendor.pagination.custom') }}
