@@ -81,57 +81,36 @@
 		            <li></li>
 		        </ul>
 			</div>
-			<div class="wrapper">
-				<div class="component-description">EVENTS, MERCH AND MORE.</div>
-				<div class="component-title">
-					<span>What do we do</span>
-				</div>
-				<div class="event-description-wrapper">
-					<p>UAVS is dedicated to empowering Vietnamese students in New South Wales by organizing a wide range of engaging activities, exciting competitions, and impactful events to support career development and enhance leadership skills. Additionally, we strive to foster a sense of belonging and create a strong network within the Vietnamese student community. </p>
-				</div>
-				<div class="event-join-wrapper">
-					<div class="join-wrapper uavs">
-						<div class="card-title">
-							Events
-						</div>
-						<div class="card-image" style="background-image: url('assets/images/event-01.JPG');"></div>
-						<div class="card-description">
-							We organise activities that revolve around social and professional events, such as the UAVS Start-up Challenge competition, UAVS Business Case Competition, and UAVS Career Fair, which are open to the Vietnamese student community. Our projects also include network and engaging opportunities with the Vietnamese culture.
-						</div>
-						<a href="" class="event-link">View Events</a>
-					</div>
-					<div class="join-wrapper student">
-						<div class="card-title">
-							Associated Events
-						</div>
-						<div class="card-image" style="background-image: url('assets/images/event-01.JPG');"></div>
-						<div class="card-description">
-							 In New South Wales, we collaborate with various Vietnamese communities and societies from different universities, providing a networking platform and organizing events such as career workshops and welcome events for incoming international students, including MOV, VGONG, VISUS, etc.
-						</div>
-						<a href="" class="event-link">View Associated Events</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="I-linked">
-			<div class="wrapper">
-				<div class="component-description">GET FORTNIGHTLY ACCESS TO</div>
-				<div class="component-title">
-					<span>Exclusive design NEWSLETTER</span>
-				</div>
- 				<div class="linked-wrapper">
- 					<div class="linked-item">
- 						<p class="linked-description">
- 							Get ready for a monthly dose of awesomeness! Our UAVS newsletter is your VIP pass to the latest updates, exclusive content, community highlights, and upcoming events. Stay connected, stay informed, and let's make your journey in Australia more amazing together!
- 						</p>
-						<a href="" class="linked-link">Join UAVS</a>
- 					</div>
- 					<div class="linked-item">
- 						<div class="card-image" style="background-image: url('assets/images/lettle.jpg');"></div>
- 					</div>
- 				</div>
-			</div>
-		</div>
+
+        <!-- Highlighted Blogs Section -->
+        <div class="I-highlighted-blogs">
+            <div class="wrapper">
+                <div class="component-description">LATEST NEWS & INSIGHTS</div>
+                <div class="component-title">
+                    <span>Highlighted Blogs</span>
+                </div>
+                <div class="blogs-description-wrapper">
+                    <p>Stay updated with the latest news, insights, and stories from UAVS. Our highlighted blogs feature key updates, student experiences, and tips to help you thrive in NSW.</p>
+                </div>
+                <div class="blogs-join-wrapper">
+                    @forelse($highlightedBlogs as $blog)
+                        <div class="join-wrapper blog">
+                            <div class="card-title">
+                                {{ $blog->title}}
+                            </div>
+                            <div class="card-image" style="background-image: url('/{{ $blog->image }}');"></div>
+                            <div class="card-description">
+                                {{ $blog->description }}
+                            </div>
+                            <a href="{{ route('blogs.show', $blog) }}" class="event-link">Read More</a>
+                        </div>
+                    @empty
+                        <p style="font-size: 18px; color: #666; text-align: center;">No highlighted blogs available.</p>
+                    @endforelse
+                </div>
+            </div>
+        </div>
+
 		<div class="I-social">
 			<div class="social-item">
 				<a href="https://www.facebook.com/uavsnsw?mibextid=LQQJ4d"><img src="assets/images/facebook-logo.svg" alt=""></a>

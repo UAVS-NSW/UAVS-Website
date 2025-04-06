@@ -51,6 +51,7 @@ class BlogController extends Controller
             "description" => $request->data_description,
             "content" => $request->data_content,
             "publish_date" => Carbon::createFromFormat('Y-m-d', $request->data_publish_date)->toDateString(),
+            "highlight" => (bool)$request->data_highlight
         ];
 
         if ($request->hasFile('data_image')) {
@@ -68,6 +69,7 @@ class BlogController extends Controller
             "description" => $request->data_description,
             "content" => $request->data_content,
             "publish_date" => $request->data_publish_date,
+            "highlight" => (bool)$request->data_highlight
         ];
 
         $blog = $this->blog->find($request->data_id);

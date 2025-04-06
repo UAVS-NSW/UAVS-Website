@@ -1,6 +1,6 @@
 const View = {
     table: {
-        __generateDTRow(data){
+        __generateDTRow(data) {
             const date = new Date(data.publish_date);
             const formattedDate = `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
 
@@ -10,17 +10,19 @@ const View = {
                 data.title,
                 data.description.substring(0, 50) + '...',
                 formattedDate,
+                data.highlight ? '<span style="color: green;">Yes</span>' : '<span style="color: red;">No</span>',
                 `<div class="view-data tab-action" atr="Edit" style="cursor: pointer" data-id="${data.id}"><i class="anticon anticon-edit"></i></div>
                 <div class="view-data tab-action" atr="Delete" style="cursor: pointer" data-id="${data.id}"><i class="anticon anticon-delete"></i></div>`
-            ]
+            ];
         },
-        init(){
+        init() {
             var row_table = [
                 { title: 'ID', name: 'id', orderable: true, width: '5%' },
                 { title: 'Image', name: 'image', orderable: false },
                 { title: 'Title', name: 'title', orderable: true },
                 { title: 'Description', name: 'description', orderable: true },
                 { title: 'Publish Date', name: 'publish_date', orderable: true },
+                { title: 'Highlight', name: 'highlight', orderable: true, width: '10%' },
                 { title: 'Action', name: 'action', orderable: false, width: '10%' },
             ];
             IndexView.table.init("#data-table", row_table);
@@ -49,8 +51,31 @@ const View = {
                 var data_image = $(`${resource}`).find('.data-image')[0].files;
                 var data_title = $(`${resource}`).find('.data-title').val();
                 var data_description = $(`${resource}`).find('.data-description').val();
-                var data_content = $(`${resource}`).find('.data-content').summernote('code');
                 var data_publish_date = $(`${resource}`).find('.data-publish_date').val();
+                var data_highlight = $(`${resource}`).find('.data-highlight').is(':checked');
+
+                var data_content = $(`${resource}`).find('.data-content').summernote('code');
+                // Process content to set font-family on each span
+                var tempDiv = $('<div>').html(data_content);
+                tempDiv.find('span').each(function() {
+                    var $span = $(this);
+                    var currentStyle = $span.attr('style') || '';
+                    // Remove existing font-family and font-size
+                    var cleanedStyle = currentStyle
+                        .replace(/font-family\s*:\s*[^;]+;?/gi, '')
+                        .trim();
+                    // Add Times New Roman and 20px
+                    var newStyle = (cleanedStyle ? cleanedStyle + '; ' : '') + "font-family: 'Times New Roman', Times, serif;";
+                    $span.attr('style', newStyle);
+                });
+                // Handle text not in spans (e.g., direct <p> content)
+                tempDiv.find('p, div, li').each(function() {
+                    var $el = $(this);
+                    if ($el.children().length === 0 && $el.text().trim()) { // Only wrap text nodes
+                        $el.html(`<span style="font-family: 'Times New Roman', Times, serif;">${$el.text()}</span>`);
+                    }
+                });
+                data_content = tempDiv.html();
 
                 if (!data_title) { required_data.push('Title is required.'); onPushData = false }
                 if (!data_description) { required_data.push('Description is required.'); onPushData = false }
@@ -63,6 +88,7 @@ const View = {
                     fd.append('data_description', data_description);
                     fd.append('data_content', data_content);
                     fd.append('data_publish_date', data_publish_date);
+                    fd.append('data_highlight', data_highlight ? 'on' : ''); //
                     return fd;
                 } else {
                     $(`${resource}`).find('.error-log .js-errors').remove();
@@ -90,6 +116,7 @@ const View = {
                 $(`${resource}`).find('.image-preview').css({
                     'background-image': `url('/${data.image ?? 'icon/noimage.png'}')`
                 });
+                $(`${resource}`).find('.data-highlight').prop('checked', data.highlight);
             },
             getVal(resource){
                 var fd = new FormData();
@@ -100,8 +127,31 @@ const View = {
                 var data_image = $(`${resource}`).find('.data-image')[0].files;
                 var data_title = $(`${resource}`).find('.data-title').val();
                 var data_description = $(`${resource}`).find('.data-description').val();
-                var data_content = $(`${resource}`).find('.data-content').summernote('code');
                 var data_publish_date = $(`${resource}`).find('.data-publish_date').val();
+                var data_highlight = $(`${resource}`).find('.data-highlight').is(':checked');
+
+                var data_content = $(`${resource}`).find('.data-content').summernote('code');
+                // Process content to set font-family on each span
+                var tempDiv = $('<div>').html(data_content);
+                tempDiv.find('span').each(function() {
+                    var $span = $(this);
+                    var currentStyle = $span.attr('style') || '';
+                    // Remove existing font-family and font-size
+                    var cleanedStyle = currentStyle
+                        .replace(/font-family\s*:\s*[^;]+;?/gi, '')
+                        .trim();
+                    // Add Times New Roman and 20px
+                    var newStyle = (cleanedStyle ? cleanedStyle + '; ' : '') + "font-family: 'Times New Roman', Times, serif;";
+                    $span.attr('style', newStyle);
+                });
+                // Handle text not in spans (e.g., direct <p> content)
+                tempDiv.find('p, div, li').each(function() {
+                    var $el = $(this);
+                    if ($el.children().length === 0 && $el.text().trim()) { // Only wrap text nodes
+                        $el.html(`<span style="font-family: 'Times New Roman', Times, serif;">${$el.text()}</span>`);
+                    }
+                });
+                data_content = tempDiv.html();
 
                 if (!data_title) { required_data.push('Title is required.'); onPushData = false }
                 if (!data_description) { required_data.push('Description is required.'); onPushData = false }
@@ -115,6 +165,7 @@ const View = {
                     fd.append('data_description', data_description);
                     fd.append('data_content', data_content);
                     fd.append('data_publish_date', data_publish_date);
+                    fd.append('data_highlight', data_highlight ? 'on' : '');
                     return fd;
                 } else {
                     $(`${resource}`).find('.error-log .js-errors').remove();

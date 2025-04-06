@@ -81,6 +81,10 @@
                                                     <input type="date" class="form-control data-publish_date" placeholder="">
                                                 </div>
                                             </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-4 col-form-label control-label">Mark as highlight</label>
+                                                <input type="checkbox" name="data_highlight" class="data-highlight" id="data_highlight">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

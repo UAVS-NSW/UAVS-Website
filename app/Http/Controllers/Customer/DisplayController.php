@@ -35,7 +35,14 @@ class DisplayController extends Controller
         $page = "index";
 
         $sponsor = $this->sponsor->get_limit();
-        return view('customer.index', compact("page", "sponsor"));
+        $highlightedBlogs = Blog::query()
+            ->where('highlight', true)
+            ->where('publish_date', '<=', Carbon::today())
+            ->orderByDesc('publish_date')
+            ->orderByDesc('created_at')
+            ->get();
+
+        return view('customer.index', compact('page', 'sponsor', 'highlightedBlogs'));
     }
     public function about(){
         $members = $this->member->get_all();
@@ -53,7 +60,9 @@ class DisplayController extends Controller
         return view('customer.sponsors', compact("page", "sponsor"));
     }
     public function blog(){
-        $blogs = Blog::orderBy('publish_date', 'desc')
+        $today = Carbon::today();
+        $blogs = Blog::where('publish_date', '<=', $today)
+            ->orderBy('publish_date', 'desc')
             ->orderBy('created_at', 'desc')
             ->paginate(5);
         $page = "blog";

@@ -10,8 +10,7 @@
     <div class="I-page-blog">
         <div class="blog-header">
             <div class="wrapper">
-                <h3>UAVS Blueprint</h3>
-                <p>A publication by UAVS, writers for Bootcamp Publication on Medium.</p>
+                <h3>News about UAVS</h3>
             </div>
         </div>
         <div class="blog-list">
