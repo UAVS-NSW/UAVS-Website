@@ -82,34 +82,35 @@
 		        </ul>
 			</div>
 
-        <!-- Highlighted Blogs Section -->
-        <div class="I-highlighted-blogs">
-            <div class="wrapper">
-                <div class="component-description">LATEST NEWS & INSIGHTS</div>
-                <div class="component-title">
-                    <span>Highlighted Blogs</span>
-                </div>
-                <div class="blogs-description-wrapper">
-                    <p>Stay updated with the latest news, insights, and stories from UAVS. Our highlighted blogs feature key updates, student experiences, and tips to help you thrive in NSW.</p>
-                </div>
-                <div class="blogs-join-wrapper">
-                    @forelse($highlightedBlogs as $blog)
-                        <div class="join-wrapper blog">
-                            <div class="card-title">
-                                {{ $blog->title}}
+        <!-- Highlighted Blogs Section - Hidden if no highlighted blogs -->
+        @if($highlightedBlogs->isNotEmpty())
+            <div class="I-highlighted-blogs">
+                <div class="wrapper">
+                    <div class="component-description">LATEST NEWS & INSIGHTS</div>
+                    <div class="component-title">
+                        <span>Highlighted Blogs</span>
+                    </div>
+                    <div class="blogs-description-wrapper">
+                        <p>Stay updated with the latest news, insights, and stories from UAVS. Our highlighted blogs feature key updates, student experiences, and tips to help you thrive in NSW.</p>
+                    </div>
+                    <div class="blogs-join-wrapper">
+                        @forelse($highlightedBlogs as $blog)
+                            <div class="join-wrapper blog">
+                                <div class="card-title">
+                                    {{ $blog->title }}
+                                </div>
+                                <div class="card-image" style="background-image: url('/{{ $blog->image }}');"></div>
+                                <div class="card-description">
+                                    {{ $blog->description }}
+                                </div>
+                                <a href="{{ route('blogs.show', $blog) }}" class="event-link">Read More</a>
                             </div>
-                            <div class="card-image" style="background-image: url('/{{ $blog->image }}');"></div>
-                            <div class="card-description">
-                                {{ $blog->description }}
-                            </div>
-                            <a href="{{ route('blogs.show', $blog) }}" class="event-link">Read More</a>
-                        </div>
-                    @empty
-                        <p style="font-size: 18px; color: #666; text-align: center;">No highlighted blogs available.</p>
-                    @endforelse
+                        @empty
+                        @endforelse
+                    </div>
                 </div>
             </div>
-        </div>
+        @endif
 
 		<div class="I-social">
 			<div class="social-item">
