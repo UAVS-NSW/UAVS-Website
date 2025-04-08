@@ -1,3 +1,26 @@
+function applyTimesNewRoman(inputText) {
+    if (!inputText.includes('<')) {
+        return `<span style="font-family: 'Times New Roman', Times, serif;">${inputText}</span>`;
+    }
+    var $tempDiv = $('<div>').html(inputText);
+    $tempDiv.find('span').each(function() {
+        var $span = $(this);
+        var currentStyle = $span.attr('style') || '';
+        var cleanedStyle = currentStyle
+            .replace(/font-family\s*:\s*[^;]+;?/gi, '')
+            .trim();
+        var newStyle = (cleanedStyle ? cleanedStyle + '; ' : '') + "font-family: 'Times New Roman', Times, serif;";
+        $span.attr('style', newStyle);
+    });
+    $tempDiv.find('p, div, li').each(function() {
+        var $el = $(this);
+        if ($el.children().length === 0 && $el.text().trim()) {
+            $el.html(`<span style="font-family: 'Times New Roman', Times, serif;">${$el.text()}</span>`);
+        }
+    });
+    return $tempDiv.html();
+}
+
 const View = {
     table: {
         __generateDTRow(data) {
@@ -51,31 +74,11 @@ const View = {
                 var data_image = $(`${resource}`).find('.data-image')[0].files;
                 var data_title = $(`${resource}`).find('.data-title').val();
                 var data_description = $(`${resource}`).find('.data-description').val();
+                var data_content = $(`${resource}`).find('.data-content').summernote('code');
                 var data_publish_date = $(`${resource}`).find('.data-publish_date').val();
                 var data_highlight = $(`${resource}`).find('.data-highlight').is(':checked');
 
-                var data_content = $(`${resource}`).find('.data-content').summernote('code');
-                // Process content to set font-family on each span
-                var tempDiv = $('<div>').html(data_content);
-                tempDiv.find('span').each(function() {
-                    var $span = $(this);
-                    var currentStyle = $span.attr('style') || '';
-                    // Remove existing font-family and font-size
-                    var cleanedStyle = currentStyle
-                        .replace(/font-family\s*:\s*[^;]+;?/gi, '')
-                        .trim();
-                    // Add Times New Roman and 20px
-                    var newStyle = (cleanedStyle ? cleanedStyle + '; ' : '') + "font-family: 'Times New Roman', Times, serif;";
-                    $span.attr('style', newStyle);
-                });
-                // Handle text not in spans (e.g., direct <p> content)
-                tempDiv.find('p, div, li').each(function() {
-                    var $el = $(this);
-                    if ($el.children().length === 0 && $el.text().trim()) { // Only wrap text nodes
-                        $el.html(`<span style="font-family: 'Times New Roman', Times, serif;">${$el.text()}</span>`);
-                    }
-                });
-                data_content = tempDiv.html();
+                data_content = applyTimesNewRoman(data_content);
 
                 if (!data_title) { required_data.push('Title is required.'); onPushData = false }
                 if (!data_description) { required_data.push('Description is required.'); onPushData = false }
@@ -129,29 +132,10 @@ const View = {
                 var data_description = $(`${resource}`).find('.data-description').val();
                 var data_publish_date = $(`${resource}`).find('.data-publish_date').val();
                 var data_highlight = $(`${resource}`).find('.data-highlight').is(':checked');
-
                 var data_content = $(`${resource}`).find('.data-content').summernote('code');
+
                 // Process content to set font-family on each span
-                var tempDiv = $('<div>').html(data_content);
-                tempDiv.find('span').each(function() {
-                    var $span = $(this);
-                    var currentStyle = $span.attr('style') || '';
-                    // Remove existing font-family and font-size
-                    var cleanedStyle = currentStyle
-                        .replace(/font-family\s*:\s*[^;]+;?/gi, '')
-                        .trim();
-                    // Add Times New Roman and 20px
-                    var newStyle = (cleanedStyle ? cleanedStyle + '; ' : '') + "font-family: 'Times New Roman', Times, serif;";
-                    $span.attr('style', newStyle);
-                });
-                // Handle text not in spans (e.g., direct <p> content)
-                tempDiv.find('p, div, li').each(function() {
-                    var $el = $(this);
-                    if ($el.children().length === 0 && $el.text().trim()) { // Only wrap text nodes
-                        $el.html(`<span style="font-family: 'Times New Roman', Times, serif;">${$el.text()}</span>`);
-                    }
-                });
-                data_content = tempDiv.html();
+                data_content = applyTimesNewRoman(data_content);
 
                 if (!data_title) { required_data.push('Title is required.'); onPushData = false }
                 if (!data_description) { required_data.push('Description is required.'); onPushData = false }

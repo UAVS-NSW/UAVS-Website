@@ -89,11 +89,13 @@
     font-size: 42px;
     margin: 0 0 12px 0;
     color: #3b4b9b;
+    font-family: 'Times New Roman', Times, serif;
 }
 .I-page-blog .blog-list .blog-item .side-layout .item-description {
     font-size: 18px;
     margin: 12px 0;
     line-height: 24px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .I-page-blog .newsletter-list {
@@ -156,6 +158,7 @@
     font-weight: 700;
     color: #3b4b9b;
     margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .blog-detail .blog-meta {
     font-size: 16px;

@@ -23,6 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Buộc HTTPS trong môi trường production (Heroku)
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
     }
 }

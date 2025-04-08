@@ -96,4 +96,19 @@
 <script type="text/javascript" src="{{ asset('assets/js/owl.carousel.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/window.js') }}"></script>
 @yield('js')
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Toggle sidebar khi nhấp vào nav-control
+        $('.nav-control').on('click', function() {
+            $('.header-nav').toggleClass('is-open');
+        });
+
+        // Đóng sidebar khi nhấp bên ngoài (tùy chọn)
+        $(document).on('click', function(event) {
+            if (!$(event.target).closest('.header-nav, .nav-control').length) {
+                $('.header-nav').removeClass('is-open');
+            }
+        });
+    });
+</script>
 </html>
