@@ -75,14 +75,28 @@ class MemberController extends Controller
             "sort" => $request->data_sort
         ];
 
-        if ($request->data_image != "null") {
+        $member = $this->member->find($request->data_id);
+        $oldImage = $member->image;
+
+        if ($request->data_image != "null" && $request->hasFile('data_image')) {
+            if ($oldImage && file_exists(public_path($oldImage))) {
+                unlink(public_path($oldImage));
+            }
             $data["image"] = $this->member->imageInventor('images', $request->data_image, 500);
         }
+
         $data_update = $this->member->update($data, $request->data_id);
         return $this->member->send_response("Update successful", $data_update, 200);
     }
 
     public function delete($id){
+        $member = $this->member->find($id);
+        $imagePath = $member->image;
+
+        if ($imagePath && file_exists(public_path($imagePath))) {
+            unlink(public_path($imagePath));
+        }
+
         $this->member->delete($id);
         return $this->member->send_response(200, "Delete successful", null);
     }
